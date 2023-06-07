@@ -5,7 +5,7 @@
             <div class="col-md-4 footer-col">
                 <div class="footer_contact">
                     <h4>
-                        informasi...
+                        Informasi...
                     </h4>
                     <div class="contact_link_box">
                         <a href="https://maps.app.goo.gl/dAwTgH68hH6M4xXa6">
@@ -66,7 +66,7 @@
             <div class="col-lg-7 mx-auto px-0">
                 <p>
                     &copy; <span id="displayYear"></span> semua hak dilindungi oleh
-                    <a href="https://www.del.ac.id/">institut teknologi del </a><br>
+                    <a href="https://www.del.ac.id/">Institut Teknologi Del </a><br>
 
                     Distribusi oleh <a href="https://www.instagram.com/tabonay_telatela/" target="_blank">Tabonay
                         Tela-Tela</a>

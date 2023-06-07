@@ -71,7 +71,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
                                     <div class="detail-box">
-                                        <h1 >
+                                        <h1>
                                             <span>
                                                 Selamat Datang
                                             </span>
@@ -137,7 +137,9 @@ $koneksi = new mysqli("localhost","root","","umkm");
 
                                         </h1>
                                         <p>
-                                            Terima kasih telah berkunjung ke Tabonay - Tempatnya Belanja UMKM! Dukung produk lokal dengan berbelanja di sini. Jangan lupa kembali lagi untuk penawaran menarik lainnya!
+                                            Terima kasih telah berkunjung ke Tabonay - Tempatnya Belanja UMKM! Dukung
+                                            produk lokal dengan berbelanja di sini. Jangan lupa kembali lagi untuk
+                                            penawaran menarik lainnya!
                                         </p>
                                         <div class="btn-box">
                                             <a href="products.php" class="btn1">
@@ -196,7 +198,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                         </div>
                         <div class="detail-box">
                             <h5>
-                               Gratis ongkir 
+                                Gratis ongkir
                             </h5>
                             <p>
                                 mengirim sampai tempat tujuan dengan gratis..
@@ -210,7 +212,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                             <i class='fa fa-check-square' style='font-size:75px'></i>
                             <div class="detail-box">
                                 <h5>
-                                   kualitas terbaik 
+                                    kualitas terbaik
                                 </h5>
                                 <p>
                                     produk terbaik dengan kualitas terbaik
@@ -233,7 +235,8 @@ $koneksi = new mysqli("localhost","root","","umkm");
                         <img src="images/paksandi1.png" class="d-block w-25" alt="..." style="border-radius: 3rem;">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/paksandi2.png" class="d-block w-25" alt="..." style="border-radius: 3rem; height: 25rem;">
+                        <img src="images/paksandi2.png" class="d-block w-25" alt="..."
+                            style="border-radius: 3rem; height: 25rem;">
                     </div>
 
                     <div class="row">
@@ -245,13 +248,16 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                 </h2>
                             </div>
                             <p style="margin-top: 30px;margin-bottom: 40px;">
-                                UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik dan menarik yang menggabungkan kearifan lokal dengan teknologi modern.
-                                Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para pelanggannya karena kualitas makanan yang baik
-                                Kehadiran UMKM makanan Tabonay Tela Tela juga dapat mempromosikan pariwisata daerah dan menarik minat wisatawan untuk mencoba makanan khas lokal.
+                                UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik
+                                dan menarik yang menggabungkan kearifan lokal dengan teknologi modern.
+                                Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para
+                                pelanggannya karena kualitas makanan yang baik
+                                Kehadiran UMKM makanan Tabonay Tela Tela juga dapat mempromosikan pariwisata daerah dan
+                                menarik minat wisatawan untuk mencoba makanan khas lokal.
                             </p>
 
                             <a href="abouts.php">
-                               jelajahi 
+                                jelajahi
                             </a>
                         </div>
                     </div>
@@ -265,7 +271,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>
-                    produk <span>Terlaris</span>
+                    Produk <span>Terlaris</span>
                 </h2>
             </div>
             <div class="row">
@@ -281,7 +287,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                     Deskripsi
                                 </a>
                                 <a href="beli.php?id=<?php echo $perproduk['id_produk'];?>" class="option2">
-                                 Beli
+                                    Beli
                                 </a>
                             </div>
                         </div>
@@ -300,7 +306,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <!-- @endforeach -->
             </div>
 
-            
+
         </div>
     </section>
     <!-- end product section -->
@@ -352,10 +358,10 @@ $koneksi = new mysqli("localhost","root","","umkm");
         </div>
     </section>
     <!-- end client section -->
-     <!-- footer -->
-     <?php include('footer.php');
+    <!-- footer -->
+    <?php include('footer.php');
      ?>
-         <!-- footer end  -->
+    <!-- footer end  -->
     <!-- jQery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->

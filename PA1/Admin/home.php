@@ -42,9 +42,9 @@ if(!isset($_SESSION['admin'])) {
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- File CSS CKEditor 5 -->
-<link rel="stylesheet" href="/path/to/ckeditor5/classic.css">
+    <link rel="stylesheet" href="/path/to/ckeditor5/classic.css">
 
-<script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 
 
 </head>
@@ -72,7 +72,7 @@ echo "<div id='datetime'>$datetime</div>";
         padding: 10px;
         font-size: 18px;
         font-weight: bold;
-        
+
     }
     </style>
 
@@ -98,7 +98,7 @@ echo "<div id='datetime'>$datetime</div>";
             <p>Tambahkan testimoni yang diposting melalui media sosial atau platform lain ke halaman ini untuk
                 menampilkan
                 pengalaman positif pelanggan.</p>
-            <a href="http://localhost/Psw%202/PA1/Admin/indexadmin.php?halaman=testimonial" class="btn">kunjungi</a>
+            <a href="indexadmin.php?halaman=testimonial" class="btn">kunjungi</a>
         </div>
 
     </center>
@@ -149,7 +149,7 @@ $totalPenjualan = $data['total_penjualan'];
 
     <div class="jeremia">
         <i class="fa fa-line-chart" aria-hidden="true"></i>
-        
+
     </div>
     <div class="total-penjualan">
         <p>total penjualan:</p>
@@ -226,10 +226,6 @@ $totalPenjualan = $data['total_penjualan'];
     font-size: 24px;
 
 }
-
-
-
-
 </style>
 
 <script>
@@ -258,4 +254,5 @@ updateClock();
 </script>
 <!-- File JavaScript CKEditor 5 -->
 <script src="/path/to/ckeditor5/ckeditor.js"></script>
+
 </html>
