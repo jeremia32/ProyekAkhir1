@@ -95,11 +95,19 @@
 }
 
 @media (max-width: 420px) {
+  .client_section .carousel-control-prev,
+  .client_section .carousel-control-next {
+    display: none;
+  }
 }
 
 @media (max-width: 376px) {
   .slider_section .detail-box h1 {
     font-size: 3rem;
+  }
+  .client_section .carousel-control-prev,
+  .client_section .carousel-control-next {
+    display: none;
   }
 }
 

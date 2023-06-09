@@ -30,8 +30,8 @@ $detail = $ambil->fetch_assoc();
                             style="width:90%; max-width:100%;height:100%; border-radius: 4rem; "></center>
                 </div>
                 <div class=" col-md-6">
-                    <h3 class="fw-bold mb-4"><?php echo $detail["nama_produk"]?></h3>
-                    <div class="harga-stok mb-4">
+                    <h3 class="fw-bold mb-4"><?php echo $detail["nama_produk"]?> </h3>
+                    <div class="harga-stok mb-4" style="background-color: rgb(231, 230, 230);">
                         <h4 class="harga">Harga:</h4>
                         <h4 class="harga-value">Rp.<?php echo number_format($detail["harga"]);?></h4>
                         <h4 class="stok">Stok:</h4>
@@ -45,7 +45,7 @@ $detail = $ambil->fetch_assoc();
                         <div class="form-group">
                             <label for="jumlah">Jumlah:</label>
                             <input type="number" min="1" max="<?php echo $detail["stok"]; ?>" class="form-control"
-                                name="jumlah" id="jumlah">
+                                name="jumlah" id="jumlah" required>
                             <div class="input-group-btn mt-2">
                                 <button class="btn btn-primary" name="beli" id="beli-btn">Beli Sekarang</button>
                             </div>

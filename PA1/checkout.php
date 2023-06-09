@@ -174,7 +174,7 @@ if(!isset($_SESSION['users'])) {
                                     message += " Total Belanja: <?php echo 'Rp.'.number_format($totalbelanja); ?> ";
 
                                     // Tentukan nomor telepon WhatsApp
-                                    var phoneNumber = "087751758649"; // Nomor telepon dengan kode negara tanpa tanda +
+                                    var phoneNumber = "6281397481172"; // Nomor telepon dengan kode negara tanpa tanda +
 
                                     // Konstruksi tautan WhatsApp
                                     var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" +

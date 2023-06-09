@@ -96,12 +96,12 @@ if(isset($_SESSION['swtd'])) {
                         </ul>
                     </div>
                 </nav>
-               
+
         </header>
         <!-- end header section -->
         <!-- slider section -->
         <section class="slider_section ">
-            <div class="slider_bg_box" style="height: 91vh;" >
+            <div class="slider_bg_box" style="height: 91vh;">
                 <img src="images/tela-tela.jpg" alt="" style="width: 100%;">
             </div>
             <div id="customCarousel1" class="carousel slide" data-ride="carousel">
@@ -116,7 +116,7 @@ if(isset($_SESSION['swtd'])) {
                                                 Tabonay Tela-Tela
                                             </span>
                                             <br>
-                                            gurihnya ngangenin
+                                            Gurihnya ngangenin
                                         </h1>
                                         <p>
                                             Terima kasih telah mempercayakan kami sebagai tempat berbelanja Anda . kami
@@ -140,7 +140,7 @@ if(isset($_SESSION['swtd'])) {
                                     <div class="detail-box">
                                         <h1>
                                             <span>
-                                                Ada produk yang diskon
+                                                Ada produk diskon
                                             </span>
                                             <br>
                                             sampai 20%
@@ -174,7 +174,9 @@ if(isset($_SESSION['swtd'])) {
 
                                         </h1>
                                         <p>
-                                            Terima kasih telah berkunjung ke Tabonay - Tempatnya Belanja UMKM! Dukung produk lokal dengan berbelanja di sini. Jangan lupa kembali lagi untuk penawaran menarik lainnya!
+                                            Terima kasih telah berkunjung ke Tabonay - Tempatnya Belanja UMKM! Dukung
+                                            produk lokal dengan berbelanja di sini. Jangan lupa kembali lagi untuk
+                                            penawaran menarik lainnya!
                                         </p>
                                         <div class="btn-box">
                                             <a href="product.php" class="btn1">
@@ -197,10 +199,10 @@ if(isset($_SESSION['swtd'])) {
             </div>
         </section>
         <style>
-            .carousel-item{
-                height: 68vh;
-                max-height: 68vh;
-            }
+        .carousel-item {
+            height: 68vh;
+            max-height: 68vh;
+        }
         </style>
 
         <!-- end slider section -->
@@ -223,10 +225,10 @@ if(isset($_SESSION['swtd'])) {
 
                         <div class="detail-box">
                             <h5>
-                               Pengiriman cepat
+                                Pengiriman cepat
                             </h5>
                             <p>
-                                kami menyediakan pengiriman cepat di seluruh indonesia
+                                Kami menyediakan pengiriman cepat di seluruh indonesia
                             </p>
                         </div>
                     </div>
@@ -239,10 +241,10 @@ if(isset($_SESSION['swtd'])) {
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Gratis ongkir 
+                                Gratis ongkir
                             </h5>
                             <p>
-                               gratis biaya kirim sampai tujuan 
+                                Gratis biaya kirim sampai tujuan
                             </p>
                         </div>
                     </div>
@@ -253,10 +255,10 @@ if(isset($_SESSION['swtd'])) {
                             <i class='fa fa-check-square' style='font-size:75px'></i>
                             <div class="detail-box">
                                 <h5>
-                                    Kualitas Terbaik 
+                                    Kualitas Terbaik
                                 </h5>
                                 <p>
-                                    produk terbaik dengan kualitas terbaik
+                                    Produk terbaik dengan kualitas terbaik
                                 </p>
                             </div>
                         </div>
@@ -269,18 +271,30 @@ if(isset($_SESSION['swtd'])) {
     <!-- about section -->
     <section class="arrival_section">
         <div class="container">
-            <div class="row">
+            <div class="row" style="justify-content: center;">
 
-                <div class="col-md-6">
-                    <img src=" images/pak luhut.jpg" alt=""  style="border-radius: 3rem; width: 100%;">
+                <div class="col-md-4">
+                    <img src=" images/pak luhut.jpg" alt="" style="border-radius: 3rem; width: 100%;">
                 </div>
 
-                <div class="col-md-6 ">
+                <div class="col-md-4 ">
                     <h2>Tabonay Tela-tela</h2><br>
                     <p style="margin-top: 20px;margin-bottom: 30px;">
-                        UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik dan menarik yang menggabungkan kearifan lokal dengan teknologi modern.
-                        Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para pelanggannya karena kualitas makanan yang baik
+                        Satu hal yang menjadi ciri khas UMKM Tabonay Tela Tela adalah cita rasa autentik yang memanjakan
+                        lidah para pelanggan. Dengan penggunaan bahan-bahan segar dan berkualitas tinggi, mereka
+                        berhasil menjaga kualitas makanan yang konsisten. Selain itu, inovasi terus menerus dilakukan
+                        dalam pengembangan menu dan variasi produk, memastikan bahwa pelanggan selalu menemukan kejutan
+                        yang menyenangkan setiap kali berkunjung.
                     </p>
+                    <p>
+                        Selain fokus pada makanan yang luar biasa, UMKM Tabonay Tela Tela juga sangat peduli dengan
+                        kebersihan dan sanitasi dalam proses produksi. Mereka memiliki komitmen yang tinggi untuk
+                        menjaga standar kebersihan yang ketat demi kepuasan dan keamanan pelanggan. Dalam setiap
+                        hidangan yang mereka sajikan, tidak hanya rasa yang lezat, tetapi juga kualitas dan kebersihan
+                        yang terjamin.UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk
+                        unik dan menarik yang menggabungkan kearifan lokal dengan teknologi modern. Produk-produk UMKM
+                        Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para pelanggannya karena kualitas
+                        makanan yang baik </p>
                     <a href="about.php">
                         Jelajahi
                     </a>
@@ -331,7 +345,7 @@ if(isset($_SESSION['swtd'])) {
 
             <div class="btn-box">
                 <a href="product.php">
-                   lihat Semua 
+                    Lihat Semua
                 </a>
             </div>
         </div>
@@ -359,7 +373,7 @@ if(isset($_SESSION['swtd'])) {
                                     <div class="img_box">
                                         <img src="images/<?php echo $perproduk['gambar'];?>" alt="" style="  height: 32vh;
                                         max-height: 33vh;">
-                                        
+
 
                                     </div>
                                 </div>
@@ -420,10 +434,10 @@ if(isset($_SESSION['swtd'])) {
         }
     }
     </style>
-   <!-- footer -->
-   <?php include('footer.php');
+    <!-- footer -->
+    <?php include('footer.php');
    ?>
-   <!-- footer end  -->
+    <!-- footer end  -->
     <!-- jQery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->

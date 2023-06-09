@@ -29,31 +29,31 @@ $_SESSION['swtd'] = $total_jumlah;
 <body>
     <!-- header section strats -->
     <header class="header_section">
-      <div class="container">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="index.php"><img src="images/logo.jpg" alt="#" style="width:
+        <div class="container">
+            <nav class=" navbar navbar-expand-lg custom_nav-container ">
+                <a class=" navbar-brand" href="index.php"><img src="images/logo.jpg" alt="#" style="width:
                       8.5rem;" /></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse"
-                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                  aria-expanded="false" aria-label="Toggle navigation">
-                  <span class=""> </span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav">
-                      <li class="nav-item ">
-                          <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="about.php">Tentang</a>
-                      </li>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="product.php">Produk</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="testimonial.php">Testimoni</a>
-                      </li>
-                      </li> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class=""> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.php">Tentang</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.php">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="testimonial.php">Testimoni</a>
+                        </li>
+                        </li>
 
                         <li class="nav-item active">
                             <a class="nav-link" href="keranjang.php">
@@ -148,79 +148,85 @@ $_SESSION['swtd'] = $total_jumlah;
     <script src="js/custom.js"></script>
     <!-- responsive table  -->
     <style>
-   @media only screen and (max-width: 736px) {
-  .sina {
-    width: 640px;
-    max-width: 100%;
-   
-    overflow: hidden;
-  }
-}
+    @media only screen and (max-width: 736px) {
+        .sina {
+            width: 640px;
+            max-width: 100%;
 
-@media only screen and (max-width: 600px) {
-  .sina {
-    width: 500px;
-    max-width: 100%;
-   
-    overflow: hidden;
-  }
-}
+            overflow: hidden;
+        }
+    }
 
-@media only screen and (max-width: 494px) {
-  .sina {
-    width: 400px;
-    max-width: 100%;
-    overflow: hidden;
-  }
-}
+    @media only screen and (max-width: 600px) {
+        .sina {
+            width: 500px;
+            max-width: 100%;
 
-@media only screen and (max-width: 440px) {
-  .sina {
-    width: 600px;
-    max-width: 100%;
-    font-size: smaller;
-    overflow: hidden;
-   
-  }
+            overflow: hidden;
+        }
+    }
 
-}
-/* buat container */
-@media only screen and (max-width: 736px) {
-  .header_section {
-    width: 740px;
-    max-width: 100%;
-   
-    overflow: hidden;
-  }
-}
+    @media only screen and (max-width: 494px) {
+        .sina {
+            width: 400px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+    }
 
-@media only screen and (max-width: 600px) {
-  .header_section {
-    width: 700%;
-    
-   
-    overflow: hidden;
-  }
-}
+    @media only screen and (max-width: 440px) {
+        .sina {
+            width: 600px;
+            max-width: 100%;
+            font-size: smaller;
+            overflow: hidden;
 
-@media only screen and (max-width: 494px) {
-  .header_section {
-    width: 800%;
-    overflow: hidden;
-  }
-}
+        }
 
-@media only screen and (max-width: 440px) {
-  .header_section {
-    width: 100%;
-    
-    font-size: smaller;
-    overflow: hidden;
-   
-  }
+    }
 
-}
-  
+    /* buat container */
+    @media only screen and (max-width: 736px) {
+        .header_section {
+            width: 740px;
+            max-width: 100%;
+
+            overflow: hidden;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .header_section {
+            width: 700%;
+
+
+            overflow: hidden;
+        }
+    }
+
+    @media only screen and (max-width: 494px) {
+        .header_section {
+            width: 800%;
+            overflow: hidden;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+
+        .header_section {
+            width: 100%;
+            font-size: xx-small;
+            overflow: hidden;
+
+        }
+
+        .table-bordered {
+            width: 100%;
+            font-size: smaller;
+            overflow: hidden;
+            max-width: 1000px;
+        }
+    }
     </style>
 </body>
 

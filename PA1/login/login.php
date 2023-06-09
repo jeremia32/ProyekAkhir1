@@ -28,14 +28,6 @@ $koneksi = new mysqli("localhost","root","","umkm");
             <div class="form-container sign-up-container">
                 <form method="POST" action="proses_sign.php">
                     <h1>Daftar</h1>
-                    <div class="social-container">
-                        <a href="https://Github.com/farazc60" target="_blank" class="social"><i
-                                class="fab fa-whatsapp"></i></a>
-                        <a href="https://Codepen.io/codewithfaraz" target="_blank" class="social"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/tabonay_telatela/" target="_blank" class="social"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
                     <span>Massukan data baru anda</span>
                     <label>
                         <input type="text" placeholder="Name" name="username" />
@@ -54,14 +46,6 @@ $koneksi = new mysqli("localhost","root","","umkm");
             <div class="form-container sign-in-container">
                 <form method="POST" action="proses_login.php">
                     <h1>Bergabung</h1>
-                    <div class="social-container">
-                        <a href="https://api.whatsapp.com/send?phone=62887751758649" target="_blank" class="social"><i
-                                class="fab fa-whatsapp"></i></a>
-                        <a href="https://Codepen.io/codewithfaraz" target="_blank" class="social"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/tabonay_telatela/" target="_blank" class="social"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
                     <span> silahkan masukkan data di bawah</span>
                     <label>
                         <input type="text" placeholder="username" name="username" />

@@ -131,7 +131,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <!-- deskripsi -->
         <section class="container text-center" style="max-width: 800px">
             <h2 class="w3-wide">Tabonay tela - tela </h2>
-            <p class="w3-opacity"><i>We love umkm</i></p>
+            <p class="w3-opacity"><i>Keanggunan yang menawan dalam produk lokal.</i></p>
             <div class="flex-container" style="max-width: 100%;">
                 <div class="flex-item" style="width: 50%;">
                     <p>UMKM di daerah merupakan salah satu sektor ekonomi yang sangat penting dalam mendukung
@@ -221,7 +221,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <style>
         .lhut {
             margin-inline: 4rem;
-            height: 30rem;
+            height: 38rem;
             overflow: hidden;
             padding: 1.5rem;
             display: flex;

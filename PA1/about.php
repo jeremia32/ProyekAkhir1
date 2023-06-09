@@ -39,11 +39,11 @@ if (isset($_SESSION["keranjang"])) {
                     <div class="col-md-4">
                         <div class="box ">
                             <div class="img-box">
-                                <i class='fa fa-truck' style='font-size:60px'></i>
+                                <i class='fa fa-truck' style='font-size:57px'></i>
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                   Pengiriman Cepat 
+                                    Pengiriman Cepat
                                 </h5>
                                 <p>
                                     kami menyediakan pengiriman cepat di seluruh indonesia
@@ -59,7 +59,7 @@ if (isset($_SESSION["keranjang"])) {
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                   Gratis Ongkir
+                                    Gratis Ongkir
                                 </h5>
                                 <p>
                                     mengirim sampai tempat tujuan
@@ -70,10 +70,10 @@ if (isset($_SESSION["keranjang"])) {
                     <div class="col-md-4">
                         <div class="box ">
                             <div class="img-box">
-                                <i class='fa fa-check-square' style='font-size:75px'></i>
+                                <i class='fa fa-check-square' style='font-size:95px'></i>
                                 <div class="detail-box">
                                     <h5>
-                                        Kualitas Terbaik 
+                                        Kualitas Terbaik
                                     </h5>
                                     <p>
                                         produk terbaik dengan kualitas terbaik
@@ -88,7 +88,7 @@ if (isset($_SESSION["keranjang"])) {
         <!-- deskripsi -->
         <section class="container text-center" style="max-width: 800px">
             <h2 class="w3-wide">Tabonay tela - tela </h2>
-            <p class="w3-opacity"><i>We love umkm</i></p>
+            <p class="w3-opacity"><i>Keanggunan yang menawan dalam produk lokal.</i></p>
             <div class="flex-container" style="max-width: 100%;">
                 <div class="flex-item" style="width: 50%;">
                     <p>UMKM di daerah merupakan salah satu sektor ekonomi yang sangat penting dalam mendukung
@@ -132,22 +132,26 @@ if (isset($_SESSION["keranjang"])) {
 
         .flex-item {
             flex-basis: 48%;
-            margin-left: 40px; 
+            margin-left: 40px;
             margin-right: 40px;
         }
         </style>
 
-        
+
         <div class="lhut">
 
             <div class="cuki cuki1">
-                <img src="images/pak luhut.jpg" class="gambar arrival_section" alt="Pak Luhut" style="width:60%; min-width: 23rem; height: 23rem; border-radius:3rem;">
+                <img src="images/pak luhut.jpg" class="gambar arrival_section" alt="Pak Luhut"
+                    style="width:60%; min-width: 23rem; height: 30rem; border-radius:3rem;">
             </div>
 
             <div style="width: 40%; display: flex; align-items: center;" class="cuki mt-2">
                 <div>
-                    <center><h2 class="text-uppercase font-weight-bold">Tabonay Tela-tela</h2></center>
-                    <p class="lead" style="overflow-wrap: break-word;word-wrap: break-word; width: auto; font-size: small;">
+                    <center>
+                        <h2 class="text-uppercase font-weight-bold">Tabonay Tela-tela</h2>
+                    </center>
+                    <p class="lead"
+                        style="overflow-wrap: break-word;word-wrap: break-word; width: auto; font-size: small;">
                         UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik
                         dan menarik yang menggabungkan kearifan lokal dengan teknologi modern.
                         Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para
@@ -172,20 +176,20 @@ if (isset($_SESSION["keranjang"])) {
 
 
         <style>
-
-        .lhut{
+        .lhut {
             margin-inline: 4rem;
-            height: 30rem;
+            height: 38rem;
             overflow: hidden;
             padding: 1.5rem;
             display: flex;
         }
 
-        .cuki1{
-            width: 50%; 
-            display: flex; 
-            justify-content: flex-end; 
-            padding-inline: 1rem; 
+        .cuki1 {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            padding-inline: 1rem;
+       
         }
 
 
@@ -193,9 +197,9 @@ if (isset($_SESSION["keranjang"])) {
             position: relative;
             animation-name: slidein;
             animation-duration: 2s;
-         max-height: 600px;
-        
-          
+            max-height: 600px;
+
+
         }
 
 
@@ -219,27 +223,28 @@ if (isset($_SESSION["keranjang"])) {
                 right: 100%;
             }
         }
-@media (max-width: 900px) {
-    .lhut{
-    display: block;
-    height: fit-content;
-  }
-  .cuki{
-    width: 100%;
-    min-width: 100%;
-    justify-content: center;
-  }
-}   
 
+        @media (max-width: 900px) {
+            .lhut {
+                display: block;
+                height: fit-content;
+            }
+
+            .cuki {
+                width: 100%;
+                min-width: 100%;
+                justify-content: center;
+            }
+        }
         </style>
 
 
         <!-- end arrival section 
         -->
         <!-- footer -->
-    <?php include('footer.php');
+        <?php include('footer.php');
     ?>
-    <!-- footer end  -->
+        <!-- footer end  -->
         <!-- jQery -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <!-- popper js -->

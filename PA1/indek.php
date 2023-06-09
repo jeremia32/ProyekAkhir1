@@ -66,7 +66,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
             </div>
             <div id="customCarousel1" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active"  style="height: 67vh; max-height: 69vh;">
                         <div class="container ">
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
@@ -94,14 +94,14 @@ $koneksi = new mysqli("localhost","root","","umkm");
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item ">
+                    <div class="carousel-item "  style="height: 67vh; max-height: 69vh;">
                         <div class="container ">
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
                                     <div class="detail-box">
                                         <h1>
                                             <span>
-                                                Ada produk yang diskon
+                                               Ada produk diskon
                                             </span>
                                             <br>
                                             <h1 style="color: rgb(47, 212, 44);">sampai 20%
@@ -123,7 +123,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" style="height: 67vh; max-height: 69vh;">
                         <div class="container ">
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
@@ -178,14 +178,14 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <div class="col-md-4">
                     <div class="box ">
                         <div class="img-box">
-                            <i class='fa fa-truck' style='font-size:35px'></i>
+                            <i class='fa fa-truck' style='font-size:55px'></i>
                         </div>
                         <div class="detail-box">
                             <h5>
                                 Pengiriman cepat
                             </h5>
                             <p>
-                                kami menyediakan pengiriman cepat di seluruh indonesia
+                                Kami menyediakan pengiriman cepat di seluruh indonesia
                             </p>
                         </div>
                     </div>
@@ -193,7 +193,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <div class="col-md-4">
                     <div class="box ">
                         <div class="img-box">
-                            <i class='fa fa-credit-card' style='font-size:60px'></i>
+                            <i class='fa fa-credit-card' style='font-size:78px'></i>
 
                         </div>
                         <div class="detail-box">
@@ -201,7 +201,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                 Gratis ongkir
                             </h5>
                             <p>
-                                mengirim sampai tempat tujuan dengan gratis..
+                                Mengirim sampai tempat tujuan dengan gratis..
                             </p>
                         </div>
                     </div>
@@ -209,13 +209,13 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <div class="col-md-4">
                     <div class="box ">
                         <div class="img-box">
-                            <i class='fa fa-check-square' style='font-size:75px'></i>
+                            <i class='fa fa-check-square' style='font-size:95px'></i>
                             <div class="detail-box">
                                 <h5>
                                     kualitas terbaik
                                 </h5>
                                 <p>
-                                    produk terbaik dengan kualitas terbaik
+                                    Produk terbaik dengan kualitas terbaik
                                 </p>
                             </div>
                         </div>
@@ -226,44 +226,101 @@ $koneksi = new mysqli("localhost","root","","umkm");
     <!-- end why section -->
 
     <!-- arrival section -->
-    <section class="arrival_section bg-light">
-        <div class="container">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" style="  height: 52vh;
-                max-height: 53vh;">
-                    <div class="carousel-item active">
-                        <img src="images/paksandi1.png" class="d-block w-25" alt="..." style="border-radius: 3rem;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/paksandi2.png" class="d-block w-25" alt="..."
-                            style="border-radius: 3rem; height: 25rem;">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-8 ml-auto">
-                            <div class="heading_container remove_line_bt">
-
-                                <h2>
-                                    Tabonay tela-tela
-                                </h2>
-                            </div>
-                            <p style="margin-top: 30px;margin-bottom: 40px;">
-                                UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik
-                                dan menarik yang menggabungkan kearifan lokal dengan teknologi modern.
-                                Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para
-                                pelanggannya karena kualitas makanan yang baik
-                                Kehadiran UMKM makanan Tabonay Tela Tela juga dapat mempromosikan pariwisata daerah dan
-                                menarik minat wisatawan untuk mencoba makanan khas lokal.
-                            </p>
-
-                            <a href="abouts.php">
-                                jelajahi
-                            </a>
-                        </div>
-                    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li> <!-- Add this line for the new image -->
+          <!-- Add more carousel indicators here if needed -->
+        </ol>
+      
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="lhut">
+              <div class="cuki cuki1">
+                <img src="images/paksandi1.png" class="gambar arrival_section" alt="Pak Luhut"
+                  style="width: 60%; min-width: 23rem; height: 30rem; border-radius: 3rem;">
+              </div>
+              <div style="width: 40%; display: flex; align-items: center;" class="cuki mt-2">
+                <div>
+                  <center>
+                    <h2 class="text-uppercase font-weight-bold">Tabonay Tela-tela</h2>
+                  </center>
+                  <p class="lead" style="overflow-wrap: break-word; word-wrap: break-word; width: auto; font-size: small;">
+                    UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik dan menarik yang menggabungkan kearifan lokal dengan teknologi modern. Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para pelanggannya karena kualitas makanan yang baik Kehadiran UMKM makanan Tabonay Tela Tela juga dapat mempromosikan pariwisata daerah dan menarik minat wisatawan untuk mencoba makanan khas lokal.
+                  </p>
                 </div>
+              </div>
             </div>
-    </section>
+          </div>
+          <div class="carousel-item">
+            <div class="lhut">
+              <div class="cuki cuki1">
+                <img src="images/paksandi2.png" class="gambar arrival_section" alt="Sandi"
+                  style="width: 60%; min-width: 23rem; height: 30rem; border-radius: 3rem;">
+              </div>
+              <div style="width: 40%; display: flex; align-items: center;" class="cuki mt-2">
+                <div>
+                  <center>
+                    <h2 class="text-uppercase font-weight-bold">Tabonay Tela-tela</h2>
+                  </center>
+                  <p class="lead" style="overflow-wrap: break-word; word-wrap: break-word; width: auto; font-size: small;">
+                    UMKM Tabonay Tela Tela dikenal karena terus berinovasi dalam membuat produk-produk unik dan menarik yang menggabungkan kearifan lokal dengan teknologi modern. Produk-produk UMKM Tabonay Tela Tela selalu meninggalkan kesan yang kuat pada para pelanggannya karena kualitas makanan yang baik Kehadiran UMKM makanan Tabonay Tela Tela juga dapat mempromosikan pariwisata daerah dan menarik minat wisatawan untuk mencoba makanan khas lokal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      
+        <!-- Navigation -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+      
+
+
+    <style>
+    .lhut {
+        margin-inline: 4rem;
+        height: 32rem;
+        overflow: hidden;
+        padding: 1.5rem;
+        display: flex;
+    }
+
+    .cuki1 {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        padding-inline: 1rem;
+    }
+
+
+    .arrival_section {
+        position: relative;
+        animation-name: slidein;
+        animation-duration: 2s;
+        max-height: 600px;
+
+
+    }
+    @media (max-width: 900px) {
+        .lhut {
+            display: block;
+            height: fit-content;
+        }
+
+        .cuki {
+            width: 100%;
+            min-width: 100%;
+            justify-content: center;
+        }
+    }
+    </style>
 
     <!-- end arrival section -->
     <!-- product section -->
@@ -352,7 +409,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 </a>
                 <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">selanjutnyas</span>
+                    <span class="sr-only">selanjutnya</span>
                 </a>
             </div>
         </div>
