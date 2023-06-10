@@ -29,14 +29,14 @@
           <p>Tabonay - Temukan keajaiban UMKM di sini! Raih kepuasan berbelanja dengan produk berkualitas dari para pengusaha lokal. Bersama kita mendukung pertumbuhan ekonomi dan kreativitas dalam negeri.</p>
           <h4>Ikuti Kami</h4>
           <div class="footer_social">
-            <a href="">
+            <a href="https://web.facebook.com/naftaliyamo.naftaliyamo" data-aos="flip-up">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://web.facebook.com/naftaliyamo.naftaliyamo">
+            <a href="https://wa.me/6281397481172?text=Hello%20Tabonay%20Tela%20Tela!%20%F0%9F%98%8A" data-aos="flip-up">
               <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </a>
 
-            <a href="https://www.instagram.com/tabonay_telatela/">
+            <a href="https://www.instagram.com/tabonay_telatela/" data-aos="flip-up">
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
           </div>
@@ -45,9 +45,10 @@
       <div class="col-md-4 footer-col">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.6708541036194!2d99.06489661525702!3d2.336259698899124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31bfc6be1d99473d%3A0x9e5abf71b3abcb8f!2sTK%20Darmala!5e0!3m2!1sen!2sid!4v1623261312527!5m2!1sen!2sid"
+          data-aos="flip-down"
           width="400"
           height="350"
-          style="border: 0"
+          style="border: 2px gray"
           allowfullscreen=""
           loading="lazy"
         ></iframe>

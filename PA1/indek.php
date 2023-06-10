@@ -166,7 +166,6 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <!-- end scroll -->
         <!-- end slider section -->
     </div>
-    <!-- why section -->
     <section class="why_section layout_padding">
         <div class="container">
             <div class="heading_container heading_center">
@@ -174,26 +173,24 @@ $koneksi = new mysqli("localhost","root","","umkm");
                     Keuntungan Belanja di Sini
                 </h2>
             </div>
-            <div class="row">
+            <div class="row" style="display: flex;">
                 <div class="col-md-4">
-                    <div class="box ">
+                    <div class="box" data-aos="fade-down-right">
                         <div class="img-box">
-                            <i class='fa fa-truck' style='font-size:55px'></i>
+                            <i class="fa fa-truck" style="font-size: 37px;"></i>
                         </div>
                         <div class="detail-box">
-                            <h5>
-                                Pengiriman cepat
-                            </h5>
-                            <p>
-                                Kami menyediakan pengiriman cepat di seluruh indonesia
-                            </p>
+                            <h5>Pengiriman cepat</h5>
+                            <p>Kami menyediakan pengiriman di seluruh Indonesia</p>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-md-4">
-                    <div class="box ">
+                    <div class="box " data-aos="zoom-out">
                         <div class="img-box">
-                            <i class='fa fa-credit-card' style='font-size:78px'></i>
+                            <i class='fa fa-credit-card' style='font-size:60px'></i>
 
                         </div>
                         <div class="detail-box">
@@ -201,18 +198,18 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                 Gratis ongkir
                             </h5>
                             <p>
-                                Mengirim sampai tempat tujuan dengan gratis..
+                                Gratis biaya kirim sampai tujuan
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box ">
+                    <div class="box " data-aos="fade-left">
                         <div class="img-box">
-                            <i class='fa fa-check-square' style='font-size:95px'></i>
+                            <i class='fa fa-check-square' style='font-size:75px'></i>
                             <div class="detail-box">
                                 <h5>
-                                    kualitas terbaik
+                                    Kualitas Terbaik
                                 </h5>
                                 <p>
                                     Produk terbaik dengan kualitas terbaik
@@ -223,7 +220,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 </div>
             </div>
     </section>
-    <!-- end why section -->
+    <!-- end why section --
 
     <!-- arrival section -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -260,8 +257,8 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <img src="images/paksandi2.png" class="gambar arrival_section" alt="Sandi"
                   style="width: 60%; min-width: 23rem; height: 30rem; border-radius: 3rem;">
               </div>
-              <div style="width: 40%; display: flex; align-items: center;" class="cuki mt-2">
-                <div>
+              <div style="width: 40%; display: flex; align-items: center;" class="cuki mt-2" >
+                <div >
                   <center>
                     <h2 class="text-uppercase font-weight-bold">Tabonay Tela-tela</h2>
                   </center>
@@ -430,6 +427,14 @@ $koneksi = new mysqli("localhost","root","","umkm");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
+   
+     <!-- AOS -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+     document.addEventListener("DOMContentLoaded", function() {
+         AOS.init();
+     });
+     </script>
 </body>
 
 </html>

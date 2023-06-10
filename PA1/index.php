@@ -30,6 +30,7 @@ $_SESSION['swtd'] = $total_jumlah;
     <title>home</title>
     <?php include('header.html');
     ?>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -215,26 +216,22 @@ if(isset($_SESSION['swtd'])) {
                     Keuntungan Belanja di Sini
                 </h2>
             </div>
-            <div class="row">
+            <div class="row" style="display: flex;">
                 <div class="col-md-4">
-                    <div class="box ">
-
+                    <div class="box" data-aos="fade-down-right">
                         <div class="img-box">
-                            <i class='fa fa-truck' style='font-size:37px'></i>
+                            <i class="fa fa-truck" style="font-size: 37px;"></i>
                         </div>
-
                         <div class="detail-box">
-                            <h5>
-                                Pengiriman cepat
-                            </h5>
-                            <p>
-                                Kami menyediakan pengiriman cepat di seluruh indonesia
-                            </p>
+                            <h5>Pengiriman cepat</h5>
+                            <p>Kami menyediakan pengiriman di seluruh Indonesia</p>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-md-4">
-                    <div class="box ">
+                    <div class="box " data-aos="zoom-out">
                         <div class="img-box">
                             <i class='fa fa-credit-card' style='font-size:60px'></i>
 
@@ -250,7 +247,7 @@ if(isset($_SESSION['swtd'])) {
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box ">
+                    <div class="box " data-aos="fade-left">
                         <div class="img-box">
                             <i class='fa fa-check-square' style='font-size:75px'></i>
                             <div class="detail-box">
@@ -274,12 +271,13 @@ if(isset($_SESSION['swtd'])) {
             <div class="row" style="justify-content: center;">
 
                 <div class="col-md-4">
-                    <img src=" images/pak luhut.jpg" alt="" style="border-radius: 3rem; width: 100%;">
+                    <img src=" images/pak luhut.jpg" data-aos="fade-up-right" alt=""
+                        style="border-radius: 3rem; width: 100%;">
                 </div>
 
                 <div class="col-md-4 ">
                     <h2>Tabonay Tela-tela</h2><br>
-                    <p style="margin-top: 20px;margin-bottom: 30px;">
+                    <p data-aos="fade-left" style="margin-top: 20px;margin-bottom: 30px;">
                         Satu hal yang menjadi ciri khas UMKM Tabonay Tela Tela adalah cita rasa autentik yang memanjakan
                         lidah para pelanggan. Dengan penggunaan bahan-bahan segar dan berkualitas tinggi, mereka
                         berhasil menjaga kualitas makanan yang konsisten. Selain itu, inovasi terus menerus dilakukan
@@ -446,6 +444,14 @@ if(isset($_SESSION['swtd'])) {
     <script src="js/bootstrap.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        AOS.init();
+    });
+    </script>
+
 </body>
 
 </html>
