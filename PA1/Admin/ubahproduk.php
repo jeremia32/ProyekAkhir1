@@ -1,4 +1,4 @@
-<h2>ubahproduk</h2>
+<h2>Ubah Produk</h2>
 <?php 
  $ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$_GET[id]'");
  $pecah = $ambil->fetch_assoc();

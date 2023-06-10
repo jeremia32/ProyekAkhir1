@@ -1,4 +1,4 @@
-<h2>testimonial produk</h2>
+<h2>Testimonial Produk</h2>
 
 <a href="indexadmin.php?halaman=tambahtestimoni" class="btn btn-success">Tambah</a>
 <table class="table table-bordered">

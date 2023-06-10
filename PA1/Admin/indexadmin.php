@@ -7,14 +7,17 @@ $koneksi = new mysqli("localhost","root","","umkm");
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>halaman Admin</title>
+    <title>Halaman Admin</title>
     <!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="../images/faviconn.png" type="" />
     <!-- MORRIS CHART STYLES-->
+
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- CUSTOM STYLES-->
     <link href="assets/css/costom.css" rel="stylesheet" />

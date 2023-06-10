@@ -1,4 +1,4 @@
-<h2>ubahproduk</h2>
+<h2>Ubah Testimoni</h2>
 <?php 
  $ambil = $koneksi->query("SELECT * FROM testimoni WHERE id_testimoni='$_GET[id]'");
  $pecah = $ambil->fetch_assoc();
@@ -18,11 +18,11 @@
 
     </div>
     <div class="form-group">
-        <label>ganti foto</label>
+        <label>Ganti foto</label>
         <input type="file" class="form-control" name="foto">
     </div>
     <div class="form-group">
-        <label>deskripsi</label>
+        <label>Deskripsi</label>
         <textarea class="form-control" name="deskripsi" id="editor" rows="10">
         <?php echo $pecah['deskripsi']?>
     </textarea>

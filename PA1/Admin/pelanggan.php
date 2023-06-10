@@ -1,4 +1,4 @@
-<h2>Data pelanggan</h2>
+<h2>Data Pelanggan</h2>
 
 <?php 
 $ambil = $koneksi->query("SELECT * FROM users"); $jumlah_pelanggan = mysqli_num_rows($ambil); ?>

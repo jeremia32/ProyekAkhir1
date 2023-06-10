@@ -1,4 +1,4 @@
-<h2>Tambah testimoni </h2>
+<h2>Tambah Testimoni </h2>
 <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 
 <form method="post" enctype="multipart/form-data">

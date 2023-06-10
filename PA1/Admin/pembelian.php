@@ -1,4 +1,4 @@
-<h2>Data pembelian</h2>
+<h2>Data Pembelian</h2>
 <table class="table table-bordered">
     <thead>
         <tr>
