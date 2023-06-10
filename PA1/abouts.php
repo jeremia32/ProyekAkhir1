@@ -89,7 +89,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                     Pengiriman Cepat
                                 </h5>
                                 <p>
-                                    kami menyediakan pengiriman cepat di seluruh indonesia
+                                    Kami mengusahakan pengiriman yang terbaik untuk anda
                                 </p>
                             </div>
                         </div>

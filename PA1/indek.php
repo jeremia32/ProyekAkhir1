@@ -181,7 +181,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                         </div>
                         <div class="detail-box">
                             <h5>Pengiriman cepat</h5>
-                            <p>Kami menyediakan pengiriman di seluruh Indonesia</p>
+                            <p>Kami mengusahakan pengiriman yang terbaik untuk anda</p>
                         </div>
                     </div>
                 </div>
