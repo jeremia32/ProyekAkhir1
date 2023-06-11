@@ -16,7 +16,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <title>home</title>
         <?php include('header.html');
     ?>
-        ?>
+
 
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -104,7 +104,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                             </div>
                             <div class="detail-box">
                                 <h5>
-                                    Grtis Ongkir
+                                    Gratis Ongkir
                                 </h5>
                                 <p>
                                     mengirim sampai tempat tujuan
@@ -315,8 +315,8 @@ $koneksi = new mysqli("localhost","root","","umkm");
         });
         </script>
 
-        < /ody>
+</body>
 
 
 
-            < /html>
+</html>

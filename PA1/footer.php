@@ -46,8 +46,8 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.6708541036194!2d99.06489661525702!3d2.336259698899124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31bfc6be1d99473d%3A0x9e5abf71b3abcb8f!2sTK%20Darmala!5e0!3m2!1sen!2sid!4v1623261312527!5m2!1sen!2sid"
           data-aos="flip-down"
-          width="400"
-          height="350"
+          width="350"
+          height="320"
           style="border: 2px gray"
           allowfullscreen=""
           loading="lazy"

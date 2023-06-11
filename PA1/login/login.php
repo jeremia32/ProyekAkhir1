@@ -64,7 +64,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
                         <h1>Login</h1>
-                        <p>Anda sudah punya admin? Ayo Admin</p>
+                        <p>Anda sudah punya akun? Ayo Login</p>
                         <button class="ghost mt-5" id="signIn">Login</button>
                     </div>
                     <div class="overlay-panel overlay-right">

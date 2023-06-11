@@ -161,9 +161,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 </div>
             </div>
         </section>
-        <!-- scroll -->
-        <a href="#" class="top"><i class='fa fa-long-arrow-up'></i></a>
-        <!-- end scroll -->
+
         <!-- end slider section -->
     </div>
     <section class="why_section layout_padding">
@@ -412,6 +410,36 @@ $koneksi = new mysqli("localhost","root","","umkm");
         </div>
     </section>
     <!-- end client section -->
+            <!--scrol  -->
+            <a href="#" class="top"><i class='fa fa-long-arrow-up'></i></a>
+            <style>
+            .top {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+            }
+        
+            .top i {
+                font-size: 20px;
+                color: white;
+                padding: 13px;
+                background: orange;
+                border-radius: 2rem;
+            }
+        
+        
+        
+            .top i:hover {
+        
+                opacity: 0.8;
+                background-color: rgb(70, 67, 67);
+                color: rgb(215, 212, 206);
+                border: 2px solid rgb(227, 223, 215);
+                transition: 1s;
+        
+        
+            }
+            </style>
     <!-- footer -->
     <?php include('footer.php');
      ?>
@@ -439,18 +467,3 @@ $koneksi = new mysqli("localhost","root","","umkm");
 
 </html>
 
-<style>
-.top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-}
-
-.top i {
-    font-size: 20px;
-    color: white;
-    padding: 13px;
-    background: orange;
-    border-radius: 2rem;
-}
-</style>

@@ -94,6 +94,12 @@
   }
 }
 
+@media (max-width: 474px) {
+  .client_section .carousel-control-prev,
+  .client_section .carousel-control-next {
+    display: none;
+  }
+}
 @media (max-width: 420px) {
   .client_section .carousel-control-prev,
   .client_section .carousel-control-next {
@@ -116,4 +122,3 @@
     max-width: 1650px;
   }
 }
-
