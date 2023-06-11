@@ -75,7 +75,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                             <span>
                                                 Selamat Datang
                                             </span>
-                                            <h1 style="color: rgb(47, 212, 44);">Tabonay Tela-Tela
+                                            <h1>Tabonay Tela-Tela
 
                                             </h1>
                                             <p style="color:white;">
@@ -104,7 +104,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                                                Ada produk diskon
                                             </span>
                                             <br>
-                                            <h1 style="color: rgb(47, 212, 44);">sampai 20%
+                                            <h1>sampai 20%
                                             </h1>
                                             <p style="color:white;">
                                                 Jangan lewatkan kesempatan untuk berbelanja dengan harga terbaik
