@@ -17,7 +17,7 @@ if(!isset($_SESSION['admin'])) {
     $nama_lengkap = $row['nama_lengkap']; // Mengambil nilai atribut 'nama_lengkap'
     ?>
     <h2><span style="font-family: 'Arial Black', sans-serif; color: #ff0000; text-shadow: 2px 2px 4px #000000;">Selamat
-            datang <?php echo $nama_lengkap ?></span></h2><br><br>
+            Datang <?php echo $nama_lengkap ?></span></h2><br><br>
 </center>
 
 
@@ -29,7 +29,7 @@ if(!isset($_SESSION['admin'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home admin</title>
     <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
 
@@ -74,32 +74,93 @@ echo "<div id='datetime'>$datetime</div>";
         font-weight: bold;
 
     }
+    /* untuk card  */
+    .box {
+  width: 400px;
+  height: 450px;
+  
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box i {
+  font-size: 3em;
+ 
+}
+
+.box h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.box p {
+  margin-bottom: 20px;
+
+}
+
+.box a.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0e9ee7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.box a.btn:hover {
+  background-color: #2211d5;
+}
+@media (max-width: 767px) {
+  .box {
+    margin-bottom: 40px;
+
+  }
+}
+
     </style>
 
     <center>
-        <div class="box">
-            <i class="fa fa-shopping-basket "></i>
-            <h3>Informasi pembelian </h3>
-            <p>Lihat daftar pesanan terbaru dan detailnya di halaman ini untuk memastikan semua transaksi
-                pembelian
-                terkelola dengan baik.</p>
-            <a href="indexadmin.php?halaman=pembelian" class="btn">kunjungi</a>
-        </div>
-        <div class="box">
-            <i class="fa fa-user-o fa-3x"></i>
-            <h3>informasi pelanggan </h3>
-            <p>Selamat datang di halaman admin pelanggan. Di sini Anda dapat melihat informasi pelanggan yang
-                terdaftar.</p>
-            <a href="indexadmin.php?halaman=pelanggan" class="btn">kunjungi</a>
-        </div>
-        <div class="box">
-            <i class="fa fa-comments-o fa-3x"></i>
-            <h3>Tambahkan testimoni</h3>
-            <p>Tambahkan testimoni yang diposting melalui media sosial atau platform lain ke halaman ini untuk
-                menampilkan
-                pengalaman positif pelanggan.</p>
-            <a href="indexadmin.php?halaman=testimonial" class="btn">kunjungi</a>
-        </div>
+      
+            <div class="box">
+                <i class="fa fa-shopping-basket "></i>
+                <h3>Informasi Pembelian </h3>
+                <p>Lihat daftar pesanan terbaru dan detailnya di halaman ini untuk memastikan semua transaksi
+                    pembelian
+                    terkelola dengan baik. </p>
+                    <br>
+                <a href="indexadmin.php?halaman=pembelian" class="btn">kunjungi</a>
+            </div>
+            <div class="box">
+                <i class="fa fa-user-o fa-3x"></i>
+                <h3>informasi pelanggan </h3>
+                <p>Selamat datang di halaman admin pelanggan. Di sini Anda dapat melihat informasi terbaru 
+                    tentang pelanggan yang
+                    terdaftar.</p>
+                    <br>
+                <a href="indexadmin.php?halaman=pelanggan" class="btn">kunjungi</a>
+            </div>
+            <div class="box">
+                <i class="fa fa-comments-o fa-3x"></i>
+                <h3>Tambahkan testimoni</h3>
+                <p>Tambahkan testimoni yang diposting melalui media sosial atau platform lain ke halaman ini untuk menampilkan pengalaman positif pelanggan Anda .</p>
+                <a href="indexadmin.php?halaman=testimonial" class="btn">kunjungi</a>
+            </div>
+
 
     </center>
 

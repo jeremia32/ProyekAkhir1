@@ -7,14 +7,14 @@
         <input type="text" class="form-control" name="namatesti">
     </div>
     <div class="form-group">
-        <label>gambar</label>
+        <label>Gambar</label>
         <input type="file" class="form-control" name="foto">
     </div>
     <div class="form-group">
-        <label>deskripsi</label>
+        <label>Deskripsi</label>
         <textarea class="form-control" name="deskripsi" id="editor" ows="10"></textarea>
     </div>
-    <button class="btn btn-success" name="save">simpan</button>
+    <button class="btn btn-success" name="save">Simpan</button>
 </form>
 <?php
 if(isset($_POST['save'])){

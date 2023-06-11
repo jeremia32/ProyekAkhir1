@@ -2,12 +2,12 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>no</th>
-            <th>username</th>
-            <th>status_pesanan</th>
-            <th>tanggal pesanan</th>
-            <th>total</th>
-            <th>action</th>
+            <th>No</th>
+            <th>Username</th>
+            <th>Status pesanan</th>
+            <th>Tanggal pesanan</th>
+            <th>Total</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>

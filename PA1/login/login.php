@@ -28,9 +28,9 @@ $koneksi = new mysqli("localhost","root","","umkm");
             <div class="form-container sign-up-container">
                 <form method="POST" action="proses_sign.php">
                     <h1>Daftar</h1>
-                    <span>Massukan data baru anda</span>
+                    <span>Masukan data baru anda</span>
                     <label>
-                        <input type="text" placeholder="Name" name="username" />
+                        <input type="text" placeholder="Nama" name="username" />
                     </label>
                     <label>
                         <input type="password" placeholder="Password" name="password" />
@@ -46,14 +46,14 @@ $koneksi = new mysqli("localhost","root","","umkm");
             <div class="form-container sign-in-container">
                 <form method="POST" action="proses_login.php">
                     <h1>Bergabung</h1>
-                    <span> silahkan masukkan data di bawah</span>
+                    <span> Silahkan masukkan data di bawah</span>
                     <label>
-                        <input type="text" placeholder="username" name="username" />
+                        <input type="text" placeholder="Nama" name="username" />
                     </label>
                     <label>
                         <input type="password" placeholder="Password" name="password" />
                     </label>
-                    <a href="admin/tabonay.php">kamu adalah admin?</a>
+                    <a href="admin/tabonay.php">Kamu adalah admin?</a>
                     <button type="submit" name="submit">LOGIN</button>
                 </form>
             </div>
@@ -64,13 +64,13 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
                         <h1>Login</h1>
-                        <p>yukk login jika anda sudah punya akun..</p>
+                        <p>Anda sudah punya admin? Ayo Admin</p>
                         <button class="ghost mt-5" id="signIn">Login</button>
                     </div>
                     <div class="overlay-panel overlay-right">
                         <h1>Buat Akun!</h1>
-                        <p>Ayo..Daftar Jika anda belum Punya akun...</p>
-                        <button class="ghost" id="signUp" name="daftar">Daftar..</button>
+                        <p>Anda belum punya akun? Ayo Daftar!</p>
+                        <button class="ghost" id="signUp" name="daftar">Daftar</button>
                     </div>
                 </div>
             </div>

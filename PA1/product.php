@@ -84,7 +84,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                         <div class="detail-box" style="display: block;">
                             <h5><?php echo $perproduk['nama_produk']; ?></h5>
                             <h6>
-                                Rp.<?php echo number_format($perproduk['harga']);?>
+                                Rp <?php echo number_format($perproduk['harga']);?>
                             </h6>
                         </div>
                     </div>

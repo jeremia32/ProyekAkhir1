@@ -189,7 +189,7 @@ if (isset($_SESSION["keranjang"])) {
             display: flex;
             justify-content: flex-end;
             padding-inline: 1rem;
-       
+
         }
 
 
@@ -243,7 +243,7 @@ if (isset($_SESSION["keranjang"])) {
         -->
         <!-- footer -->
         <?php include('footer.php');
-    ?>
+   ?>
         <!-- footer end  -->
         <!-- jQery -->
         <script src="js/jquery-3.4.1.min.js"></script>
@@ -253,6 +253,14 @@ if (isset($_SESSION["keranjang"])) {
         <script src="js/bootstrap.js"></script>
         <!-- custom js -->
         <script src="js/custom.js"></script>
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+        });
+        </script>
+
 </body>
 
 

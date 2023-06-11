@@ -5,7 +5,7 @@
 
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label>nama</label>
+        <label>Nama</label>
         <input type="text" class="form-control" name="nama">
     </div>
     <div class="form-group">
@@ -17,14 +17,14 @@
         <input type="number" class="form-control" name="stok">
     </div>
     <div class="form-group">
-        <label>gambar</label>
+        <label>Gambar</label>
         <input type="file" class="form-control" name="foto">
     </div>
     <div class="form-group">
-        <label>deskripsi</label>
+        <label>Deskripsi</label>
         <textarea class="form-control" name="deskripsi" id="editor" rows="10"></textarea>
     </div>
-    <button class="btn btn-success" name="save">simpan</button>
+    <button class="btn btn-success" name="save">Simpan</button>
 </form>
 <script>
 ClassicEditor

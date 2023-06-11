@@ -348,7 +348,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
                         <div class="img-box" style>
                             <img src="images/<?php echo $perproduk['gambar'];?>" alt="">
                         </div>
-                        <div class="detail-box">
+                        <div class="detail-box" style="display: block;">
                             <h5><?php echo $perproduk['nama_produk']; ?></h5>
                             <h6>
                                 Rp.<?php echo number_format($perproduk['harga']);?>

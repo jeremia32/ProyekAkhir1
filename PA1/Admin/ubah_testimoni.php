@@ -18,7 +18,7 @@
 
     </div>
     <div class="form-group">
-        <label>Ganti foto</label>
+        <label>Ganti gambar</label>
         <input type="file" class="form-control" name="foto">
     </div>
     <div class="form-group">
@@ -27,7 +27,7 @@
         <?php echo $pecah['deskripsi']?>
     </textarea>
     </div>
-    <button class="btn btn-success" name="ubah">ubah</button>
+    <button class="btn btn-success" name="ubah">Ubah</button>
 </form>
 
 <?php 

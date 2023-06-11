@@ -16,12 +16,14 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <title>home</title>
         <?php include('header.html');
     ?>
+        ?>
 
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
 
 <body>
@@ -305,10 +307,16 @@ $koneksi = new mysqli("localhost","root","","umkm");
         <script src="js/custom.js"></script>
 
         <!-- google map  -->
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
-        < /body>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+        });
+        </script>
+
+        < /ody>
 
 
 
-        <
-        /html>
+            < /html>

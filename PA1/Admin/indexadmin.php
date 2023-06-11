@@ -52,7 +52,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
               <a href="indexadmin.php"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
             </li>
             <li>
-              <a href="indexadmin.php?halaman=produk"><i class="fa fa-shopping-bag fa-3x"></i> produk</a>
+              <a href="indexadmin.php?halaman=produk"><i class="fa fa-shopping-bag fa-3x"></i> Produk</a>
             </li>
             <li>
               <a href="indexadmin.php?halaman=pembelian"><i class="fa fa-shopping-basket fa-3x"></i> Pembelian</a>
@@ -61,7 +61,7 @@ $koneksi = new mysqli("localhost","root","","umkm");
               <a href="indexadmin.php?halaman=pelanggan"><i class="fa fa-user-o fa-3x"></i> Pelanggan</a>
             </li>
             <li>
-              <a href="indexadmin.php?halaman=testimonial"><i class="fa fa-comments-o fa-3x"></i> testimonial</a>
+              <a href="indexadmin.php?halaman=testimonial"><i class="fa fa-comments-o fa-3x"></i> Testimoni</a>
             </li>
             <li>
               <a href="indexadmin.php?halaman=logout"><i class="fa fa-sign-out fa-3x"></i> Logout</a>

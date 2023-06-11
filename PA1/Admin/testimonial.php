@@ -4,10 +4,11 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>no</th>
+            <th>No</th>
             <th>Nama</th>
-            <th>gambar</th>
-            <th>deskripsi</th>
+            <th>Gambar</th>
+            <th>Deskripsi</th>
+            <th>Aksi </th>
         </tr>
     </thead>
     <tbody>

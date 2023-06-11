@@ -220,7 +220,7 @@ if(isset($_SESSION['swtd'])) {
                 <div class="col-md-4">
                     <div class="box" data-aos="fade-down-right">
                         <div class="img-box">
-                            <i class="fa fa-truck" style="font-size: 37px;"></i>
+                            <i class="fa fa-truck" style="font-size:35px;"></i>
                         </div>
                         <div class="detail-box">
                             <h5>Pengiriman cepat</h5>
@@ -329,10 +329,10 @@ if(isset($_SESSION['swtd'])) {
                         <div class="img-box" style>
                             <img src="images/<?php echo $perproduk['gambar'];?>" alt="">
                         </div>
-                        <div class="detail-box">
+                        <div class="detail-box" style="display: block;">
                             <h5><?php echo $perproduk['nama_produk']; ?></h5>
                             <h6>
-                                Rp.<?php echo number_format($perproduk['harga']);?>
+                                Rp <?php echo number_format($perproduk['harga']);?>
                             </h6>
                         </div>
                     </div>

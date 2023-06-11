@@ -4,13 +4,13 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>no</th>
+            <th>No</th>
             <th>Nama</th>
-            <th>harga</th>
-            <th>stok</th>
-            <th>gambar</th>
-            <th>deskripsi</th>
-            <th>action</th>
+            <th>Harga</th>
+            <th>Stok</th>
+            <th>Gambar</th>
+            <th>Deskripsi</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -41,7 +41,7 @@
 @media (min-width: 415px) {
     .table-bordered {
         width: 100%;
-         font-size: x-small;
+        font-size: x-small;
     }
 }
 </style>

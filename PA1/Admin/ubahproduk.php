@@ -9,11 +9,11 @@
 
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label>nama produk</label>
+        <label>Nama produk</label>
         <input type="text" class="form-control" name="nama" value="<?php echo $pecah ['nama_produk']; ?>">
     </div>
     <div class="form-group">
-        <label>harga</label>
+        <label>Harga</label>
         <input type="number" class="form-control" name="harga" value="<?php echo $pecah ['harga']; ?>">
     </div>
     <div class="form-group">
@@ -25,11 +25,11 @@
     ?>" width="200px">
     </div>
     <div class="form-group">
-        <label>ganti foto</label>
+        <label>Ganti gambar</label>
         <input type="file" class="form-control" name="foto">
     </div>
     <div class="form-group">
-        <label>deskripsi</label>
+        <label>Deskripsi</label>
         <textarea class="form-control" name="deskripsi" id="editor" rows="10">
         <?php echo $pecah['deskripsi']?>
     </textarea>
