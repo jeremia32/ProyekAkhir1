@@ -98,37 +98,71 @@ $koneksi = new mysqli("localhost","root","","umkm");
                     </form>
                 </div>
             </div>
-            <div class="row">
-                <!-- @foreach( $product as $p) -->
-                <?php $ambil = $koneksi->query("SELECT * FROM produk") ?>
-                <?php while($perproduk=$ambil->fetch_assoc()){?>
-
-                <div class="col-sm-6 col-md-4 col-lg-3" style="margin-bottom:20px;">
-                    <div class="box">
-                        <div class="option_container">
-                            <div class="options">
-                                <a href="detail.php?id=<?php echo $perproduk['id_produk'];?>" class="option1">
-                                    Deskripsi
-                                </a>
-                                <a href="beli.php?id=<?php echo $perproduk['id_produk'];?>" class="option2">
-                                    Beli
-                                </a>
-                            </div>
-                        </div>
-                        <div class="img-box" style>
-                            <img src="images/<?php echo $perproduk['gambar'];?>" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5><?php echo $perproduk['nama_produk']; ?></h5>
-                            <h6>
-                                Rp.<?php echo number_format($perproduk['harga']);?>
-                            </h6>
+        </div>
+        <div class="row">
+            <?php $ambil = $koneksi->query("SELECT * FROM produk WHERE status = 1 "); ?>
+            <?php $counter = 0; ?>
+            <?php while($perproduk = $ambil->fetch_assoc()) { ?>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="detail.php?id=<?php echo $perproduk['id_produk'];?>" class="option1">
+                                Deskripsi
+                            </a>
+                            <a href="beli.php?id=<?php echo $perproduk['id_produk'];?>" class="option2">
+                                Beli
+                            </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="images/<?php echo $perproduk['gambar'];?>" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5><?php echo $perproduk['nama_produk']; ?></h5>
+                        <h6>Rp <?php echo number_format($perproduk['harga']);?></h6>
+                    </div>
                 </div>
-                <?php }?>
-                <!-- @endforeach -->
             </div>
+            <?php $counter++; ?>
+            <?php } ?>
+            <?php if ($counter < 5) {
+                for ($i = 0; $i < (45- $counter); $i++) { ?>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <!-- Placeholder for additional empty product box -->
+            </div>
+            <?php }
+            } ?>
+            <!-- @foreach( $product as $p) -->
+            <?php $ambil = $koneksi->query("SELECT * FROM produk") ?>
+            <?php while($perproduk=$ambil->fetch_assoc()){?>
+
+            <div class="col-sm-6 col-md-4 col-lg-3" style="margin-bottom:20px;">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="detail.php?id=<?php echo $perproduk['id_produk'];?>" class="option1">
+                                Deskripsi
+                            </a>
+                            <a href="beli.php?id=<?php echo $perproduk['id_produk'];?>" class="option2">
+                                Beli
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box" style>
+                        <img src="images/<?php echo $perproduk['gambar'];?>" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5><?php echo $perproduk['nama_produk']; ?></h5>
+                        <h6>
+                            Rp.<?php echo number_format($perproduk['harga']);?>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <?php }?>
+            <!-- @endforeach -->
+        </div>
 
 
 

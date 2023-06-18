@@ -1,0 +1,65 @@
+
+                        <!-- pesan melalui wa -->
+                        <div class="col-md-3">
+                            <div class="col-md-3">
+                                <p class="fst-italic">pay:</p>
+                                <button id="sendWhatsAppButton" class="btn btn-outline-success" name="checkout"
+                                    onclick="sendWhatsApp()" style="display:flex;">
+
+                                    <i class=" fa fa-whatsapp" style="font-size:24px"></i>
+                                </button>
+
+                                <script>
+                                function sendWhatsApp() {
+                                    var message = "HII ADMIN, Pemesanan saya adalah:";
+
+                                    // Loop melalui item dalam keranjang
+                                    <?php foreach ($_SESSION['keranjang'] as $id_produk => $jumlah): ?>
+                                    <?php
+            // Ambil informasi produk dari database
+            $ambil = $koneksi->query('SELECT * FROM produk WHERE id_produk='.$id_produk);
+            $pecah = $ambil->fetch_assoc();
+            $subtotal = $pecah['harga'] * $jumlah;
+            ?>
+
+                                    // Tambahkan detail item ke pesan
+                                    message +=
+                                        " <?php echo $jumlah; ?> <?php echo $pecah['nama_produk']; ?> <?php echo 'Rp.'.number_format($subtotal); ?> ";
+                                    <?php endforeach; ?>
+
+                                    // Tambahkan total pembelian ke pesan
+                                    message +=
+                                        " Total Belanja: <?php echo 'Rp.'.number_format($totalbelanja); ?> ";
+
+                                    // Tentukan nomor telepon WhatsApp
+                                    var phoneNumber =
+                                        "6281397481172"; // Nomor telepon dengan kode negara tanpa tanda +
+
+                                    // Konstruksi tautan WhatsApp
+                                    var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber +
+                                        "&text=" +
+                                        encodeURIComponent(message);
+
+                                    // Buka tautan WhatsApp di jendela baru
+                                    window.open(whatsappLink, '_blank');
+
+                                    // Menyimpan data ke tabel pemesanan
+                                    <?php
+                if (isset($_POST["checkout"])) {
+                    $id_pelanggan = $_SESSION["users"]["id_akun"];
+                    $tanggal_pembelian = date("Y-m-d");
+                    $status_pemesanan = 'menunggu';
+                    $totalbelanja = $totalbelanja;
+
+                    // Menyimpan data ke tabel pemesanan
+                    $koneksi->query("INSERT INTO pemesanan (akun_id, status_pesanan, tanggal_pesanan, total) VALUES ('$id_pelanggan', '$status_pemesanan', '$tanggal_pembelian', '$totalbelanja')");
+                    echo"<script>alert('Data produk telah di ubah');
+                                </script>";
+                                echo "
+                                <meta http-equiv='refresh' content='2;url=product.php'>";
+                                }
+                                ?>
+                                }
+                                </script>
+                            </div>
+                        </div>

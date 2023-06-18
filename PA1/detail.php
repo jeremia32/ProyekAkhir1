@@ -35,7 +35,14 @@ $detail = $ambil->fetch_assoc();
                         <h4 class="harga">Harga:</h4>
                         <h4 class="harga-value">Rp.<?php echo number_format($detail["harga"]);?></h4>
                         <h4 class="stok">Stok:</h4>
-                        <h4 class="stok-value"><?php echo $detail["stok"]?></h4>
+                        <!-- halaman stok yang dimana jika stok nya 0 maka akan muncul pre-order  -->
+                        <?php
+if ($detail["stok"] > 0) {
+    echo "<h4 class='stok-value'>".$detail["stok"]."</h4>";
+} else {
+    echo "<h4 class='stok-value'>Pre-order</h4>";
+}
+?>
                     </div>
                     <div class="deskripsi mb-4">
                         <h5>Deskripsi:</h5>
@@ -88,21 +95,25 @@ $detail = $ambil->fetch_assoc();
     }
     </style>
     <script>
-    $(document).ready(function() {
-                $("#beli-btn").click(function(event) {
-                            event.preventDefault(); // Mencegah form submit secara default
-                            var jumlah = parseInt($("#jumlah").val()); // Mendapatkan nilai jumlah
-                            var stok = parseInt($(".stok-value").text()); // Mendapatkan nilai stok
+    $(document).ready(function)() {
+        $("#beli-btn").click(function(event)) {
+            event.preventDefault(); // Mencegah form submit secara default
+            var jumlah = parseInt($("#jumlah").val()); // Mendapatkan nilai jumlah
+            var stok = parseInt($(".stok-value").text()); // Mendapatkan nilai stok
 
-                            if (jumlah < 1) { // Memastikan jumlah yang dimasukkan lebih besar dari 0
-                                alert("Jumlah harus lebih besar dari 0.");
-                                return;
-                            }
+            if (jumlah < 1) { // Memastikan jumlah yang dimasukkan lebih besar dari 0
+                alert("Jumlah harus lebih besar dari 0.");
+                return;
+            }
 
-                            if (jumlah > stok) { // Memastikan jumlah yang dimasukkan tidak melebihi stok
-                                alert("Jumlah pembelian melebihi stok yang tersedia.");
-                                return;
-                            }
+            if (jumlah > stok) { // Memastikan jumlah yang dimasukkan tidak melebihi stok
+                alert("Jumlah pembelian melebihi stok yang tersedia.");
+
+
+                return;
+            }
+        }
+    }
     </script>
 
     <?php if (isset($_POST["beli"])) {

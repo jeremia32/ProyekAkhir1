@@ -62,11 +62,10 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 </div>
             </div>
             <div class="row">
-                <!-- @foreach( $product as $p) -->
-                <?php $ambil = $koneksi->query("SELECT * FROM produk") ?>
-                <?php while($perproduk=$ambil->fetch_assoc()){?>
-
-                <div class="col-sm-6 col-md-4 col-lg-3" style="margin-bottom:20px;">
+                <?php $ambil = $koneksi->query("SELECT * FROM produk WHERE status = 1 "); ?>
+                <?php $counter = 0; ?>
+                <?php while($perproduk = $ambil->fetch_assoc()) { ?>
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="box">
                         <div class="option_container">
                             <div class="options">
@@ -81,15 +80,21 @@ $koneksi = new mysqli("localhost","root","","umkm");
                         <div class="img-box">
                             <img src="images/<?php echo $perproduk['gambar'];?>" alt="">
                         </div>
-                        <div class="detail-box" style="display: block;">
+                        <div class="detail-box">
                             <h5><?php echo $perproduk['nama_produk']; ?></h5>
-                            <h6>
-                                Rp <?php echo number_format($perproduk['harga']);?>
-                            </h6>
+                            <h6>Rp <?php echo number_format($perproduk['harga']);?></h6>
                         </div>
                     </div>
                 </div>
-                <?php }?>
+                <?php $counter++; ?>
+                <?php } ?>
+                <?php if ($counter < 5) {
+                for ($i = 0; $i < (45- $counter); $i++) { ?>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <!-- Placeholder for additional empty product box -->
+                </div>
+                <?php }
+            } ?>
                 <!-- @endforeach -->
             </div>
 

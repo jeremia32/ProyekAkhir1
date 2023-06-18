@@ -14,6 +14,7 @@
         <label>Deskripsi</label>
         <textarea class="form-control" name="deskripsi" id="editor" ows="10"></textarea>
     </div>
+
     <button class="btn btn-success" name="save">Simpan</button>
 </form>
 <?php

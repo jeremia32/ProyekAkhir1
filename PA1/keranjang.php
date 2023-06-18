@@ -20,6 +20,7 @@ $_SESSION['swtd'] = $total_jumlah;
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
 
     <title>tabonay tela-tela</title>
     <?php include('header.html');
@@ -115,16 +116,123 @@ $_SESSION['swtd'] = $total_jumlah;
                         <td>Rp.<?php echo number_format($pecah["harga"]);?></td>
                         <td><?php echo $jumlah;?></td>
                         <td>Rp.<?php echo number_format($subharga);?></td>
-                        <td><a href="hapuskeranjang.php?id=<?php echo $id_produk ?>"
-                                class="btn btn-outline-danger btn-xs">Hapus</a></td>
+                        <td>
+                            <a href="detail.php?id=<?php echo $id_produk ?>" class="btn btn-outline-primary btn-xs">
+                                <i class="fa fa-external-link" aria-hidden="true"></i> view
+                            </a>
+                        </td>
+
+
+
                     </tr>
                     <?php $nomor++?>
                     <?php endforeach?>
 
                 </tbody>
             </table>
+            <a href="#" class="kiri" data-toggle="modal" data-target="#myModal">
+                <i class="fa fa-question-circle"></i>
+            </a>
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">Ada yang bisa kami bantu?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bantuan Pemesanan :</p>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="list-group" id="list-tab" role="tablist">
+                                            <a class="list-group-item list-group-item-action active" id="list-home-list"
+                                                data-bs-toggle="list" href="#list-home" role="tab"
+                                                aria-controls="list-home">
+                                                bagaimana cara melakukan pemesanan?</a>
 
-            <a href="index.php" class="btn btn-secondary">Lanjutkan Belanja</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                                                aria-labelledby="list-home-list">
+                                                <h6>Cara melakukan pemesanan:</h6>
+                                                <ol class="list-group list-group-numbered">
+                                                    <li class="list-group-item">Anda wajib melakukan Login terlebih
+                                                        dahulu
+                                                    </li>
+                                                    <li class="list-group-item">Anda mengunjugi halaman produk</li>
+                                                    <li class="list-group-item">Anda dapat menekan tombol tambahkan ke
+                                                        keranjang </li>
+                                                    <li class="list-group-item">Anda juga dapat melihat detail produk
+                                                    </li>
+                                                    <li class="list-group-item">Di halaman keranjang anda dapat
+                                                        melakukan cheakout dan melanjutkan belanja
+                                                    </li>
+                                                    <li class="list-group-item">Dihalaman cheakout anda akan diminta
+                                                        konfirmasi pesanan
+                                                    </li>
+                                                    <li class="list-group-item">Terakhir anda akan menekean icon Wa
+                                                        untuk
+                                                        memberitahu pesananan anda ke pada admin </li>
+                                                </ol>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                                                aria-labelledby="list-profile-list">...</div>
+                                            <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                                                aria-labelledby="list-messages-list ">...</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <a class="navbar-brand" href="index.php"> <img src="images/logo.jpg" alt="#"
+                                        width="70" /></a>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <style>
+            .kiri {
+                position: fixed;
+                bottom: 2rem;
+                left: 2rem;
+            }
+
+            .kiri i {
+                font-size: 20px;
+                color: white;
+                padding: 13px;
+                background: orange;
+                border-radius: 2rem;
+            }
+
+            .kiri i:hover {
+
+                opacity: 0.8;
+                background-color: rgb(70, 67, 67);
+                color: rgb(215, 212, 206);
+                border: 2px solid rgb(227, 223, 215);
+                transition: 1s;
+
+
+            }
+            </style>
+            <!-- end modal  -->
+
+
+            <a href="products.php" class="btn btn-secondary">Lanjutkan Belanja</a>
             <a href="checkout.php" class="btn btn-success">checkout</a>
 
 
@@ -228,6 +336,9 @@ $_SESSION['swtd'] = $total_jumlah;
         }
     }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

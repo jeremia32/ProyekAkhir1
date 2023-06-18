@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="testimonial.php">testimoni</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkout_success.php">pesanan saya</a>
+                    </li>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"

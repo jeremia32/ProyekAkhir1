@@ -74,14 +74,15 @@ $koneksi = new mysqli("localhost","root","","umkm");
     </section>
     <!-- end inner page section -->
     <!-- client section -->
-    <!-- client section -->
+
+    <!-- testimoni  section -->
     <section class="client_section layout_padding">
         <div class="container">
             <div class="heading_container heading_center">
-                <h2>Testimoni Pelanggan</h2>
+                <h2>Testimoni pelanggan</h2>
             </div>
 
-            <?php $ambil = $koneksi->query("SELECT * FROM testimoni") ?>
+            <?php $ambil = $koneksi->query("SELECT * FROM testimoni WHERE status = 1 ") ?>
             <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <?php 
@@ -93,8 +94,9 @@ $koneksi = new mysqli("localhost","root","","umkm");
                             <div class="img_container">
                                 <div class="img-box">
                                     <div class="img_box">
-                                        <img src="images/<?php echo $perproduk['gambar'];?>" alt="" style="  height: 42vh;
-                                        max-height: 43vh;">
+                                        <img src="images/<?php echo $perproduk['gambar'];?>" alt="" style="  height: 32vh;
+                                        max-height: 33vh;">
+
 
                                     </div>
                                 </div>
@@ -110,11 +112,11 @@ $koneksi = new mysqli("localhost","root","","umkm");
                 </div>
                 <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="sr-only">sebelumnya</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <span class="sr-only">selanjutnya</span>
                 </a>
             </div>
         </div>

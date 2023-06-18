@@ -1,13 +1,69 @@
 <?php
 session_start();
-$koneksi = new mysqli("localhost","root","","umkm");
-if(!isset($_SESSION['users'])) {
-    echo"<script>alert('Anda harus melakukan login dahulu');</script>";
-    echo"<script>location='login/login.php';</script>";
-    exit;
- }
- 
+$koneksi = new mysqli("localhost", "root", "", "umkm");
 
+if (!isset($_SESSION['users']) || empty($_SESSION['users'])) {
+    echo "<script>alert('Anda harus melakukan login dahulu');</script>";
+    echo "<script>location='login/login.php';</script>";
+    exit;
+}
+
+if (isset($_POST["submit"])) {
+    $id_user = $_SESSION['users']['id_akun'];
+    
+    $alamat = $_POST["alamat"];
+    $jenis_pengiriman = $_POST["jenis_pengiriman"];
+    $metode_pembayaran = $_POST["metode_pembayaran"];
+
+    $total_belanja = 0;
+    foreach ($_SESSION["keranjang"] as $id_produk => $jumlah) {
+        $ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+        $pecah = $ambil->fetch_assoc();
+        $subharga = $pecah["harga"] * $jumlah;
+        $total_belanja += $subharga;
+    }
+    $tanggal_pesanan = date("Y-m-d");
+    $koneksi->query("INSERT INTO pemesanan (id_pesanan,akun_id, alamat, jenis_pengiriman, pembayaran, total, tanggal_pesanan,status_pesanan,id_produk) 
+                    VALUES ('$id_pesanan','$id_user', '$alamat', '$jenis_pengiriman', '$metode_pembayaran', '$total_belanja', '$tanggal_pesanan','0','$id_produk')");
+
+    $id_pesanan = $koneksi->insert_id;
+
+    foreach ($_SESSION["keranjang"] as $id_produk => $jumlah) {
+        $koneksi->query("INSERT INTO pemesanan_produk (id_pesanan, id_produk, jumlah) 
+                        VALUES ('$id_pesanan', '$id_produk', '$jumlah')");
+    }
+
+    // Simpan data pemesanan di session
+    $_SESSION['pemesanan'] = [
+        'id_pesanan' => $id_pesanan,
+        'alamat' => $alamat,
+        'jenis_pengiriman' => $jenis_pengiriman,
+        'metode_pembayaran' => $metode_pembayaran,
+        'total_belanja' => $total_belanja
+    ];
+
+    // Redirect ke halaman checkout_success
+    echo "<script>alert('Pemesanan sukses!');</script>";
+    echo "<script>location='checkout_success.php';</script>";
+    exit;
+}
+?>
+
+<!-- Kode HTML lainnya -->
+
+
+
+
+<?php
+
+?>
+
+<?php
+// ...
+$id_user = $_SESSION['users']['id_akun'];
+
+// Ambil data pesanan pengguna berdasarkan ID pengguna
+$ambil_pesanan = $koneksi->query("SELECT * FROM pemesanan WHERE akun_id = '$id_user'");
 ?>
 
 
@@ -54,17 +110,16 @@ if(!isset($_SESSION['users'])) {
                             <a class="nav-link" href="keranjang.php">
                                 <i class='fa fa-shopping-cart' style='font-size:20px'> [
                                     <?php
-                                                                                    $total = $_SESSION['swtd'];
+                                    $total = $_SESSION['swtd'];
 
-                                        if($total) {
-                                            
-                                            $total = $_SESSION['swtd'];
-                                            echo $total;
-                                        }
-                                        else {
-                                            echo 0;
-                                        }
- ?>
+                                    if($total) {
+                                        $total = $_SESSION['swtd'];
+                                        echo $total;
+                                    }
+                                    else {
+                                        echo 0;
+                                    }
+                                    ?>
                                     ]</i>
                             </a>
                         </li>
@@ -76,16 +131,18 @@ if(!isset($_SESSION['users'])) {
     <nav>
         <section class="konten">
             <div class="container">
-                <h1 class="fst-italic ">checkout</h1>
+                <h1 class="fst-italic ">konfirmasi pesanan </h1>
                 <hr>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>No</th>
                             <th>produk</th>
+                            <th>gambar</th>
                             <th>harga</th>
                             <th>Jumlah</th>
                             <th>Subharga</th>
+
 
                         </tr>
                     </thead>
@@ -95,121 +152,96 @@ if(!isset($_SESSION['users'])) {
                         <?php foreach($_SESSION["keranjang"] as $id_produk => $jumlah):?>
                         <!-- menampilkan produk yang sedang di perulangkan berdasarkan id_produk -->
                         <?php
-        $ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
-        $pecah = $ambil->fetch_assoc();
-        $subharga = $pecah["harga"]*$jumlah;
+                        $ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+                        $pecah = $ambil->fetch_assoc();
+                        $subharga = $pecah["harga"]*$jumlah;
+                         // Ambil status pesanan
+                         ?>
 
-
-    ?>
                         <tr>
                             <td><?php echo $nomor; ?></td>
                             <td><?php echo $pecah["nama_produk"];?></td>
+                            <td> <img src="images/<?php echo $pecah['gambar'];?>" style="width: 7rem;"></td>
                             <td>Rp.<?php echo number_format($pecah["harga"]);?></td>
                             <td><?php echo $jumlah;?></td>
-                            <td>Rp.<?php echo number_format($subharga);?></td>
+                            <td>Rp.<?php echo number_format($subharga); ?></td>
 
                         </tr>
                         <?php $nomor++?>
                         <?php $totalbelanja+=$subharga;?>
                         <?php endforeach?>
-
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="4">Total Belanja</th>
+                            <th colspan="5">Total Belanja</th>
                             <th>Rp.<?php echo number_format($totalbelanja)?></th>
                         </tr>
-                    </tfoot>
                 </table>
 
-                <form method="post">
+                <form method="post" action="checkout.php">
                     <div class="row">
                         <div class="col-md-4">
                             <p class="fst-italic">username:</p>
                             <div class="form-group">
                                 <input type="text" readonly value="<?php echo $_SESSION["users"]["username"]?> "
                                     class="form-control">
-
                             </div>
                         </div>
-
                         <div class="col-md-4">
                             <div class="form-group">
                                 <p class="fst-italic">email:</p>
                                 <input type="text" readonly value="<?php echo $_SESSION["users"]["email"]?> "
                                     class="form-control">
-
                             </div>
                         </div>
-
-                        <!-- pesan melalui wa -->
-                        <div class="col-md-3">
-                            <div class="col-md-3">
-                                <p class="fst-italic">pay:</p>
-                                <button id="sendWhatsAppButton" class="btn btn-outline-success" name="checkout"
-                                    onclick="sendWhatsApp()" style="display:flex;">
-
-                                    <i class=" fa fa-whatsapp" style="font-size:24px"></i>
-                                </button>
-
-                                <script>
-                                function sendWhatsApp() {
-                                    var message = "HII ADMIN, Pemesanan saya adalah:";
-
-                                    // Loop melalui item dalam keranjang
-                                    <?php foreach ($_SESSION['keranjang'] as $id_produk => $jumlah): ?>
-                                    <?php
-            // Ambil informasi produk dari database
-            $ambil = $koneksi->query('SELECT * FROM produk WHERE id_produk='.$id_produk);
-            $pecah = $ambil->fetch_assoc();
-            $subtotal = $pecah['harga'] * $jumlah;
-            ?>
-
-                                    // Tambahkan detail item ke pesan
-                                    message +=
-                                        " <?php echo $jumlah; ?> <?php echo $pecah['nama_produk']; ?> <?php echo 'Rp.'.number_format($subtotal); ?> ";
-                                    <?php endforeach; ?>
-
-                                    // Tambahkan total pembelian ke pesan
-                                    message += " Total Belanja: <?php echo 'Rp.'.number_format($totalbelanja); ?> ";
-
-                                    // Tentukan nomor telepon WhatsApp
-                                    var phoneNumber = "6281397481172"; // Nomor telepon dengan kode negara tanpa tanda +
-
-                                    // Konstruksi tautan WhatsApp
-                                    var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" +
-                                        encodeURIComponent(message);
-
-                                    // Buka tautan WhatsApp di jendela baru
-                                    window.open(whatsappLink, '_blank');
-
-                                    // Menyimpan data ke tabel pemesanan
-                                    <?php
-            if (isset($_POST["checkout"])) {
-                $id_pelanggan = $_SESSION["users"]["id_akun"];
-                $tanggal_pembelian = date("Y-m-d");
-                $status_pemesanan = 'Berhasil';
-                $totalbelanja = $totalbelanja;
-
-                // Menyimpan data ke tabel pemesanan
-                $koneksi->query("INSERT INTO pemesanan (akun_id, status_pesanan, tanggal_pesanan, total) VALUES ('$id_pelanggan', '$status_pemesanan', '$tanggal_pembelian', '$totalbelanja')");
-                echo"<script>alert('Data produk telah di ubah');
-                                </script>";
-                                echo "
-                                <meta http-equiv='refresh' content='2;url=product.php'>";
-                                }
-                                ?>
-                                }
-                                </script>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <p class="fst-italic">Alamat:</p>
+                                <textarea name="alamat" class="form-control" required></textarea>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <p class="fst-italic">Jenis Pengiriman:</p>
+                                <select name="jenis_pengiriman" class="form-control" required>
+                                    <option value="COD">COD</option>
+                                    <option value="reguler">Reguler</option>
+                                    <option value="pesan">Pesan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <p class="fst-italic">Pembayaran:</p>
+                                <select name="metode_pembayaran" class="form-control" required>
+                                    <option value="BNI">BNI</option>
+                                    <option value="QRIS">QRIS</option>
+                                    <option value="BRI">BRI</option>
+                                    <option value="MANDIRI">Mandiri</option>
+                                    <option value="bayar_di_tempat">Bayar di Tempat</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Konfirmasi Pesanan</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </nav>
+
+
+</body>
+
+</html>
 
 
 
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-                            crossorigin="anonymous">
-                        </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+</script>
 
 </body>
 

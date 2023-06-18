@@ -1,3 +1,23 @@
+<style>
+.last-purchase {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.last-purchase-icon {
+    margin-right: 10px;
+}
+
+.status-konfirmasi {
+    color: green;
+}
+
+.status-belum-konfirmasi {
+    color: red;
+}
+</style>
+
 <h2>Data Pembelian</h2>
 <table class="table table-bordered">
     <thead>
@@ -6,6 +26,8 @@
             <th>Username</th>
             <th>Status pesanan</th>
             <th>Tanggal pesanan</th>
+            <th>alamat</th>
+            <th>jenis Pengiriman </th>
             <th>Total</th>
             <th>Aksi</th>
         </tr>
@@ -21,32 +43,85 @@
             if ($no === 1) {
                 $pembelianTerakhir = $pecah;
             }
-        ?>
+            ?>
         <tr>
             <td><?php echo $no++; ?></td>
             <td><?php echo $pecah['username']; ?></td>
-            <td><?php echo $pecah['status_pesanan']; ?></td>
-            <td><?php echo $pecah['tanggal_pesanan']; ?></td>
-            <td> Rp <?php echo number_format($pecah['total']); ?></td>
             <td>
+                <?php
+                    if ($pecah['status_pesanan'] == 1) {
+                        echo '<span class="status-konfirmasi">Diterima</span>';
+                    } else if ($pecah['status_pesanan'] == 2) {
+                        echo '<span class="status-belum-konfirmasi">Ditolak</span>';
+                    }
+                else if ($pecah['status_pesanan'] == 3) {
+                    echo '<span class="status-belum-konfirmasi">dibatalkan pelanggan</span>';
+                }
+                    else {
+                        echo 'Menunggu';
+                    }
+                    ?>
+            </td>
+            <td><?php echo $pecah['tanggal_pesanan']; ?></td>
+            <td><?php echo $pecah['alamat']; ?></td>
+            <td><?php echo $pecah['jenis_pengiriman']; ?></td>
+            <td>Rp <?php echo number_format($pecah['total']); ?></td>
+            <td>
+                <?php
+                if ($pecah['status_pesanan'] == 0) { // Menampilkan tombol verifikasi hanya untuk pesanan yang belum diverifikasi
+                ?>
+                <a href="terima.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-success btn-sm">
+                    terima
+                </a>
+                <a href="konfirmasipembelian.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-danger btn-sm">
+                    tolak
+                </a>
+                <?php
+                }
+                ?>
+                <?php
+                if ($pecah['status_pesanan'] == 1) {
+                ?>
+                <a href="terima.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-success btn-sm" disabled>
+                    terima
+                </a>
+                <a href="konfirmasipembelian.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-danger btn-sm"
+                    disabled>
+                    tolak
+                </a>
+                <?php } ?>
+                <?php
+                if ($pecah['status_pesanan'] == 2) {
+                    ?>
+                <a href="terima.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-success btn-sm" disabled>
+                    terima
+                </a>
+                <a href="konfirmasipembelian.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-danger btn-sm"
+                    disabled>
+                    tolak
+                </a>
+                <?php } ?>
                 <a href="indexadmin.php?halaman=hapuspembelian&id=<?php echo $pecah['id_pesanan']; ?>"
-                    class="btn-danger btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    class="btn btn-danger btn-sm">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+                <a href="indexadmin.php?halaman=view_pembelian&id=<?php echo $pecah['id_pesanan']; ?>"
+                    class="btn btn-primary btn-sm">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                </a>
             </td>
         </tr>
         <?php } ?>
         <tr>
-            <td colspan="4"><strong>Total Penjualan Keseluruhan:</strong></td>
+            <td colspan="6"><strong>Total Penjualan Keseluruhan:</strong></td>
             <td>Rp<?php echo number_format($totalPenjualan); ?></td>
             <td></td>
         </tr>
     </tbody>
 </table>
-
 <!-- Bagian HTML lainnya -->
-
 <p class="last-purchase">
-    <span class="last-purchase-icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-    </span>
+    <span class="last-purchase-icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
     Pembelian terakhir: <?php echo $pembelianTerakhir['tanggal_pesanan']; ?>
 </p>
 <style>
@@ -54,10 +129,17 @@
     display: flex;
     align-items: center;
     font-size: 24px;
-
 }
 
 .last-purchase-icon {
     margin-right: 10px;
+}
+
+.status-konfirmasi {
+    color: green;
+}
+
+.status-belum-konfirmasi {
+    color: red;
 }
 </style>

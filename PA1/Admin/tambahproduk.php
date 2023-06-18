@@ -1,7 +1,5 @@
-<h2>Tambah Produk </h2>
+<h2>Tambah Produk</h2>
 <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
-
-
 
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
@@ -10,11 +8,11 @@
     </div>
     <div class="form-group">
         <label>Harga (Rp)</label>
-        <input type="number" class="form-control" name="harga">
+        <input type="number" class="form-control" name="harga" min="1" required>
     </div>
     <div class="form-group">
         <label>Stok</label>
-        <input type="number" class="form-control" name="stok">
+        <input type="number" class="form-control" name="stok" min="1" required>
     </div>
     <div class="form-group">
         <label>Gambar</label>
@@ -26,6 +24,7 @@
     </div>
     <button class="btn btn-success" name="save">Simpan</button>
 </form>
+
 <script>
 ClassicEditor
     .create(document.querySelector('#editor'))
@@ -36,15 +35,17 @@ ClassicEditor
         console.error(error);
     });
 </script>
-<?php
-if(isset($_POST['save'])){
-    $nama= $_FILES['foto']['name'];
-    $lokasi =$_FILES['foto']['tmp_name'];
-    move_uploaded_file($lokasi,"../images/".$nama);
-$koneksi->query("INSERT INTO produk
-(nama_produk,harga,stok,gambar,deskripsi)VALUES ('$_POST[nama]','$_POST[harga]','$_POST[stok]','$nama','$_POST[deskripsi]')");
-echo"<div class='alert alert-info'>Data tersimpan</div>";
-echo "<meta http-equiv='refresh'content='1;url=indexadmin.php?halaman=produk'>";
-}
 
+<?php
+if (isset($_POST['save'])) {
+    $nama = $_FILES['foto']['name'];
+    $lokasi = $_FILES['foto']['tmp_name'];
+    move_uploaded_file($lokasi, "../images/" . $nama);
+
+    $koneksi->query("INSERT INTO produk (nama_produk, harga, stok, gambar, deskripsi)
+                     VALUES ('$_POST[nama]', '$_POST[harga]', '$_POST[stok]', '$nama', '$_POST[deskripsi]')");
+
+    echo "<div class='alert alert-info'>Data tersimpan</div>";
+    echo "<meta http-equiv='refresh' content='1;url=indexadmin.php?halaman=produk'>";
+}
 ?>
