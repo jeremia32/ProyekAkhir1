@@ -26,8 +26,8 @@
             <th>Username</th>
             <th>Status pesanan</th>
             <th>Tanggal pesanan</th>
-            <th>alamat</th>
-            <th>jenis Pengiriman </th>
+            <th>Alamat</th>
+            <th>Jenis Pengiriman </th>
             <th>Total</th>
             <th>Aksi</th>
         </tr>
@@ -71,10 +71,10 @@
                 if ($pecah['status_pesanan'] == 0) { // Menampilkan tombol verifikasi hanya untuk pesanan yang belum diverifikasi
                 ?>
                 <a href="terima.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-success btn-sm">
-                    terima
+                    Terima
                 </a>
                 <a href="konfirmasipembelian.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-danger btn-sm">
-                    tolak
+                    Tolak
                 </a>
                 <?php
                 }
@@ -83,22 +83,22 @@
                 if ($pecah['status_pesanan'] == 1) {
                 ?>
                 <a href="terima.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-success btn-sm" disabled>
-                    terima
+                    Terima
                 </a>
                 <a href="konfirmasipembelian.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-danger btn-sm"
                     disabled>
-                    tolak
+                    Tolak
                 </a>
                 <?php } ?>
                 <?php
                 if ($pecah['status_pesanan'] == 2) {
                     ?>
                 <a href="terima.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-success btn-sm" disabled>
-                    terima
+                    Terima
                 </a>
                 <a href="konfirmasipembelian.php?id=<?php echo $pecah['id_pesanan']; ?>" class="btn btn-danger btn-sm"
                     disabled>
-                    tolak
+                    Tolak
                 </a>
                 <?php } ?>
                 <a href="indexadmin.php?halaman=hapuspembelian&id=<?php echo $pecah['id_pesanan']; ?>"
