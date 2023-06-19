@@ -74,92 +74,94 @@ echo "<div id='datetime'>$datetime</div>";
         font-weight: bold;
 
     }
+
     /* untuk card  */
     .box {
-  width: 400px;
-  height: 450px;
-  
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  
-}
+        width: 400px;
+        height: 450px;
 
-.box:hover {
-  transform: translateY(-5px);
-}
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
 
-.box i {
-  font-size: 3em;
- 
-}
+    }
 
-.box h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  color: #333;
-}
+    .box:hover {
+        transform: translateY(-5px);
+    }
 
-.box p {
-  margin-bottom: 20px;
+    .box i {
+        font-size: 3em;
 
-}
+    }
 
-.box a.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #0e9ee7;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease-in-out;
-}
+    .box h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        color: #333;
+    }
 
-.box a.btn:hover {
-  background-color: #2211d5;
-}
-@media (max-width: 767px) {
-  .box {
-    margin-bottom: 40px;
+    .box p {
+        margin-bottom: 20px;
 
-  }
-}
+    }
 
+    .box a.btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #0e9ee7;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .box a.btn:hover {
+        background-color: #2211d5;
+    }
+
+    @media (max-width: 767px) {
+        .box {
+            margin-bottom: 40px;
+
+        }
+    }
     </style>
 
     <center>
-      
-            <div class="box">
-                <i class="fa fa-shopping-basket "></i>
-                <h3>Informasi Pembelian </h3>
-                <p>Lihat daftar pesanan terbaru dan detailnya di halaman ini untuk memastikan semua transaksi
-                    pembelian
-                    terkelola dengan baik. </p>
-                    <br>
-                <a href="indexadmin.php?halaman=pembelian" class="btn">kunjungi</a>
-            </div>
-            <div class="box">
-                <i class="fa fa-user-o fa-3x"></i>
-                <h3>informasi pelanggan </h3>
-                <p>Selamat datang di halaman admin pelanggan. Di sini Anda dapat melihat informasi terbaru 
-                    tentang pelanggan yang
-                    terdaftar.</p>
-                    <br>
-                <a href="indexadmin.php?halaman=pelanggan" class="btn">kunjungi</a>
-            </div>
-            <div class="box">
-                <i class="fa fa-comments-o fa-3x"></i>
-                <h3>Tambahkan testimoni</h3>
-                <p>Tambahkan testimoni yang diposting melalui media sosial atau platform lain ke halaman ini untuk menampilkan pengalaman positif pelanggan Anda .</p>
-                <a href="indexadmin.php?halaman=testimonial" class="btn">kunjungi</a>
-            </div>
+
+        <div class="box">
+            <i class="fa fa-shopping-basket "></i>
+            <h3>Informasi Pembelian </h3>
+            <p>Lihat daftar pesanan terbaru dan detailnya di halaman ini untuk memastikan semua transaksi
+                pembelian
+                terkelola dengan baik. </p>
+            <br>
+            <a href="indexadmin.php?halaman=pembelian" class="btn">kunjungi</a>
+        </div>
+        <div class="box">
+            <i class="fa fa-user-o fa-3x"></i>
+            <h3>informasi pelanggan </h3>
+            <p>Selamat datang di halaman admin pelanggan. Di sini Anda dapat melihat informasi terbaru
+                tentang pelanggan yang
+                terdaftar.</p>
+            <br>
+            <a href="indexadmin.php?halaman=pelanggan" class="btn">kunjungi</a>
+        </div>
+        <div class="box">
+            <i class="fa fa-comments-o fa-3x"></i>
+            <h3>Tambahkan testimoni</h3>
+            <p>Tambahkan testimoni yang diposting melalui media sosial atau platform lain ke halaman ini untuk
+                menampilkan pengalaman positif pelanggan Anda .</p>
+            <a href="indexadmin.php?halaman=testimonial" class="btn">kunjungi</a>
+        </div>
 
 
     </center>
@@ -173,14 +175,14 @@ $query = "SELECT username, COUNT(*) as jumlah_pembelian FROM pemesanan JOIN user
 $result = $koneksi->query($query);
 
 // menampilkan hasil query
-echo "<h2>Username dengan pembelian terbanyak</h2>";
+echo "<h2>Username dengan pemesanan terbanyak</h2>";
 echo "<div class='jere'>";
 echo "<table class='table table-bordered'>";
 echo "<thead>";
 echo "<tr>";
 echo "<th>no</th>";
 echo "<th>username</th>";
-echo "<th>jumlah_pembelian</th>";
+echo "<th>jumlah pembelian</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";

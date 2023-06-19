@@ -136,6 +136,10 @@ $koneksi = new mysqli("localhost","root","","umkm");
                     {
                         include 'view_pembelian.php';
                     }
+                    elseif($_GET['halaman']=='view_pesanan')
+                    {
+                        include 'view_pesanan.php';
+                    }
                     elseif ($_GET['halaman'] == 'konfirmasipembelian') {
                         include 'konfirmasipembelian.php';
                     }

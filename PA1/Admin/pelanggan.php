@@ -64,6 +64,9 @@ $jumlah_pelanggan = mysqli_num_rows($ambil);
                     class="btn btn-danger">
                     <i class="fa fa-trash" aria-hidden="true"></i>
                 </a>
+                <a href="indexadmin.php?halaman=view_pesanan&id=<?php echo $pecah['id_akun']; ?>" class="btn btn-info">
+                    View Pemesanan
+                </a>
             </td>
         </tr>
         <?php } ?>
