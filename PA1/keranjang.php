@@ -89,12 +89,12 @@ $_SESSION['swtd'] = $total_jumlah;
                 <thead class="jere">
                     <tr>
                         <th>No</th>
-                        <th>produk</th>
-                        <th>gambar</th>
-                        <th>harga</th>
+                        <th>Produk</th>
+                        <th>Gambar</th>
+                        <th>Harga</th>
                         <th>Jumlah</th>
                         <th>Subharga</th>
-                        <th>aksi</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="sina">

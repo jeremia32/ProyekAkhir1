@@ -51,8 +51,7 @@ if ($detail["stok"] > 0) {
                     <form method="post">
                         <div class="form-group">
                             <label for="jumlah">Jumlah:</label>
-                            <input type="number" min="1" max="<?php echo $detail["stok"]; ?>" class="form-control"
-                                name="jumlah" id="jumlah" required>
+                            <input type="number" class="form-control" name="jumlah" id="jumlah" min="1" required>
                             <div class="input-group-btn mt-2">
                                 <button class="btn btn-primary" name="beli" id="beli-btn">Beli Sekarang</button>
                             </div>

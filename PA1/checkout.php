@@ -137,9 +137,9 @@ $ambil_pesanan = $koneksi->query("SELECT * FROM pemesanan WHERE akun_id = '$id_u
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>produk</th>
-                            <th>gambar</th>
-                            <th>harga</th>
+                            <th>Produk</th>
+                            <th>Gambar</th>
+                            <th>Harga</th>
                             <th>Jumlah</th>
                             <th>Subharga</th>
 
@@ -181,7 +181,7 @@ $ambil_pesanan = $koneksi->query("SELECT * FROM pemesanan WHERE akun_id = '$id_u
                 <form method="post" action="checkout.php">
                     <div class="row">
                         <div class="col-md-4">
-                            <p class="fst-italic">username:</p>
+                            <p class="fst-italic">Username:</p>
                             <div class="form-group">
                                 <input type="text" readonly value="<?php echo $_SESSION["users"]["username"]?> "
                                     class="form-control">
@@ -189,7 +189,7 @@ $ambil_pesanan = $koneksi->query("SELECT * FROM pemesanan WHERE akun_id = '$id_u
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <p class="fst-italic">email:</p>
+                                <p class="fst-italic">Email:</p>
                                 <input type="text" readonly value="<?php echo $_SESSION["users"]["email"]?> "
                                     class="form-control">
                             </div>
