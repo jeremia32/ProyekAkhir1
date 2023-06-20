@@ -1,24 +1,21 @@
 <?php
 session_start();
-//koneksi ke dalam data base 
+// koneksi ke dalam database 
 $koneksi = new mysqli("localhost","root","","umkm");
 ?>
 
 <?php
 $id_produk = $_GET["id"];
-$ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+$ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
 $detail = $ambil->fetch_assoc();
-
-
 ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-    <title>detail produk</title>
-    <?php include('header.html');
-    ?>
+    <title>Detail Produk</title>
+    <?php include('header.html'); ?>
 </head>
 
 <body>
@@ -26,8 +23,10 @@ $detail = $ambil->fetch_assoc();
         <div class="container">
             <div class="row">
                 <div class="col-md-6" style="height:35rem; overflow:hidden;">
-                    <center><img src="images/<?php echo $detail['gambar'];?>" alt="" class="img-fluid rounded"
-                            style="width:90%; max-width:100%;height:100%; border-radius: 4rem; "></center>
+                    <center>
+                        <img src="images/<?php echo $detail['gambar']; ?>" alt="" class="img-fluid rounded"
+                            style="width:90%; max-width:100%;height:100%; border-radius: 4rem; ">
+                    </center>
                 </div>
                 <div class=" col-md-6">
                     <h3 class="fw-bold mb-4"><?php echo $detail["nama_produk"]?> </h3>
@@ -37,12 +36,12 @@ $detail = $ambil->fetch_assoc();
                         <h4 class="stok">Stok:</h4>
                         <!-- halaman stok yang dimana jika stok nya 0 maka akan muncul pre-order  -->
                         <?php
-if ($detail["stok"] > 0) {
-    echo "<h4 class='stok-value'>".$detail["stok"]."</h4>";
-} else {
-    echo "<h4 class='stok-value'>Pre-order</h4>";
-}
-?>
+                        if ($detail["stok"] > 0) {
+                            echo "<h4 class='stok-value'>".$detail["stok"]."</h4>";
+                        } else {
+                            echo "<h4 class='stok-value'>Pre-order</h4>";
+                        }
+                        ?>
                     </div>
                     <div class="deskripsi mb-4">
                         <h5>Deskripsi:</h5>
@@ -51,7 +50,8 @@ if ($detail["stok"] > 0) {
                     <form method="post">
                         <div class="form-group">
                             <label for="jumlah">Jumlah:</label>
-                            <input type="number" class="form-control" name="jumlah" id="jumlah" min="1" required>
+                            <input type="number" class="form-control" name="jumlah" id="jumlah" min="1"
+                                <?php if($detail["stok"] > 0) { echo 'max="'.$detail["stok"].'"'; } ?> required>
                             <div class="input-group-btn mt-2">
                                 <button class="btn btn-primary" name="beli" id="beli-btn">Beli Sekarang</button>
                             </div>
@@ -93,27 +93,7 @@ if ($detail["stok"] > 0) {
         background-color: #0069d9;
     }
     </style>
-    <script>
-    $(document).ready(function)() {
-        $("#beli-btn").click(function(event)) {
-            event.preventDefault(); // Mencegah form submit secara default
-            var jumlah = parseInt($("#jumlah").val()); // Mendapatkan nilai jumlah
-            var stok = parseInt($(".stok-value").text()); // Mendapatkan nilai stok
 
-            if (jumlah < 1) { // Memastikan jumlah yang dimasukkan lebih besar dari 0
-                alert("Jumlah harus lebih besar dari 0.");
-                return;
-            }
-
-            if (jumlah > stok) { // Memastikan jumlah yang dimasukkan tidak melebihi stok
-                alert("Jumlah pembelian melebihi stok yang tersedia.");
-
-
-                return;
-            }
-        }
-    }
-    </script>
 
     <?php if (isset($_POST["beli"])) {
         //mendapat jumlah yang di input

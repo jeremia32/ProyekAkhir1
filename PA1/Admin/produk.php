@@ -38,8 +38,7 @@
                         <?php } ?>
                         <a href="indexadmin.php?halaman=ubahproduk&id=<?php echo $pecah['id_produk'];?>"
                             class="btn-info btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
-                        <a href="indexadmin.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk'];?>"
-                            class="btn-danger btn"><i class="fa fa-trash" aria-hidden="true"> </i></a>
+
                     </div>
                 </td>
             </tr>
